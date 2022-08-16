@@ -13,7 +13,7 @@
 <body>
 <form action="/main" method="get">
     <h1>Nhập số tiền cần chuyển đổi(từ USD sang VND)</h1>
-    <input type="text" name="soTienNhap" value="${soTienNhap}">
+    <input type="text" name="inputMoney" value="${inputMoney}">
     <br>
     <h1>Nhập tỉ giá </h1>
     <input type="text" name="rate" value="${rate}">
@@ -21,6 +21,6 @@
     <button type="submit">Chuyển đổi</button>
 </form>
 <h1>Kết Quả</h1>
-<h1>${tienSauDo}</h1>
+<h1>${afterChangeMoney}</h1>
 </body>
 </html>
