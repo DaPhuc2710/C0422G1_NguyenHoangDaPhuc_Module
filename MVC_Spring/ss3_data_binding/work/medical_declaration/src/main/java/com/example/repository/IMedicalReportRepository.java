@@ -1,0 +1,9 @@
+package com.example.repository;
+
+import com.example.model.MedicalReport;
+
+import java.util.List;
+
+public interface IMedicalReportRepository {
+    List<MedicalReport> findAll();
+}
