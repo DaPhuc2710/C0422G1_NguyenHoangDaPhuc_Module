@@ -17,12 +17,16 @@
     <tr>
         <th>STT</th>
         <th>Tên</th>
+        <th>Chi tiết</th>
+        <th>Sửa</th>
 
     </tr>
-    <c:forEach var="medical" items="${medicalReportService}" varStatus="stt">
+    <c:forEach var="medical" items="${medical}" varStatus="stt">
         <tr>
             <td>${stt.count}</td>
             <td>${medical.name}</td>
+            <td></td>
+            <td></td>
         </tr>
     </c:forEach>
 </table>

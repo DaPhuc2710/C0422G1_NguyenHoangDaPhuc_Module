@@ -3,7 +3,7 @@ package com.example.model;
 public class Mailbox {
     String language;
     int pageSize;
-   boolean spamFilter;
+    boolean spamFilter;
     String signature;
 
     public Mailbox() {

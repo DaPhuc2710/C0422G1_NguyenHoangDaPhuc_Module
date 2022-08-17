@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MedicalController {
@@ -23,8 +24,24 @@ public class MedicalController {
     private IMedicalReportService iMedicalReportService;
 
     @GetMapping("/")
-    public String gohome(Model model) {
-        model.addAttribute("medicalReportService", iMedicalReportService.findAll());
+    public String goHome(Model model) {
+        model.addAttribute("medical", iMedicalReportService.findAll());
         return "home";
+    }
+
+    @RequestMapping("goEdit")
+    public String goEdit(Model model) {
+        return "edit";
+    }
+
+    @RequestMapping("goCreate")
+    public String goCreate(Model model) {
+        model.addAttribute("medical", new MedicalReport());
+        model.addAttribute("birthYear", iBirthYearService);
+        model.addAttribute("date", iDateService);
+        model.addAttribute("gender", iGenderService);
+        model.addAttribute("nationality", iNationalityService);
+        model.addAttribute("transport", iTransportService);
+        return "create";
     }
 }

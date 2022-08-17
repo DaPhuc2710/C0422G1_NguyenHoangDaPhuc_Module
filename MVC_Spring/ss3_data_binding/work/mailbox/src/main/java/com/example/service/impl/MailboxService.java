@@ -4,15 +4,20 @@ import com.example.model.Mailbox;
 import com.example.repository.IMailboxRepository;
 import com.example.service.IMailboxService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-
+@Service
 public class MailboxService implements IMailboxService {
     @Autowired
     private IMailboxRepository iMailboxRepository;
 
     @Override
-    public List<Mailbox> findAll() {
+    public Mailbox findAll() {
         return iMailboxRepository.findAll();
+    }
+
+    @Override
+    public void save(Mailbox mailbox) {
+        iMailboxRepository.save(mailbox);
     }
 }

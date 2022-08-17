@@ -2,13 +2,14 @@ package com.example.controller;
 
 import com.example.model.Mailbox;
 import com.example.service.ILanguageService;
+import com.example.service.IMailboxService;
 import com.example.service.IPageSizeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MailboxController {
@@ -16,21 +17,22 @@ public class MailboxController {
     private ILanguageService iLanguageService;
     @Autowired
     private IPageSizeService iPageSizeService;
+    @Autowired
+    private IMailboxService mailboxService;
 
-    @RequestMapping("home")
+    @GetMapping("/home")
     public String goHome(Model model) {
+        model.addAttribute("mailbox", new Mailbox());
         model.addAttribute("langList", iLanguageService.findAll());
         model.addAttribute("pageList", iPageSizeService.findAll());
-        model.addAttribute("mailbox", new Mailbox());
-        return "setting";
+        return "/create";
     }
 
-    @PostMapping("save")
-    public String saveForm(@ModelAttribute("mailbox") Mailbox mailbox, Model model) {
-        model.addAttribute("language", mailbox.getLanguage());
-        model.addAttribute("pageSize", mailbox.getPageSize());
-        model.addAttribute("spamFilter", mailbox.isSpamFilter());
-        model.addAttribute("signature", mailbox.getSignature());
-        return "saving";
+    @PostMapping("/save")
+    public String saveForm(@ModelAttribute Mailbox mailbox, Model model) {
+        mailboxService.save(mailbox);
+        Mailbox mailbox1 = mailboxService.findAll();
+        model.addAttribute("mailBox1", mailbox1);
+        return "/list";
     }
 }
