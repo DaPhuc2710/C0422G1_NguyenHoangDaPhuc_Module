@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.service.IService;
+import com.example.service.ICalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class CalculatorController {
     @Autowired
-    private  IService iService;
+    private ICalculatorService iService;
 
     @GetMapping("/")
     public String home(){
