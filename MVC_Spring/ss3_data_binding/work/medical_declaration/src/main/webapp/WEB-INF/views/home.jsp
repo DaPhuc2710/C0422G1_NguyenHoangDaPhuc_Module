@@ -14,18 +14,20 @@
 </head>
 <body>
 <table>
+
     <tr>
         <th>STT</th>
         <th>Tên</th>
         <th>Chi tiết</th>
         <th>Sửa</th>
+        <th><a href="/goCreate">Thêm mới</a></th>
 
     </tr>
     <c:forEach var="medical" items="${medical}" varStatus="stt">
         <tr>
             <td>${stt.count}</td>
             <td>${medical.name}</td>
-            <td></td>
+            <td><a href="/goEdit">Sửa</a> </td>
             <td></td>
         </tr>
     </c:forEach>

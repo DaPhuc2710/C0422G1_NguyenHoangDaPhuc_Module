@@ -1,6 +1,7 @@
 package com.example.model;
 
 public class MedicalReport {
+    private int id;
     private String name;
     private String yearOfBirth;
     private String gender;
@@ -36,6 +37,33 @@ public class MedicalReport {
         this.endMonth = endMonth;
         this.endYear = endYear;
         this.otherInfor = otherInfor;
+    }
+
+    public MedicalReport(int id, String name, String yearOfBirth, String gender, String nationality, String idCard, String transport, String transportIdr, String seatNumber, String startDay, String startMonth, String startYear, String endDay, String endMonth, String endYear, String otherInfor) {
+        this.id = id;
+        this.name = name;
+        this.yearOfBirth = yearOfBirth;
+        this.gender = gender;
+        this.nationality = nationality;
+        this.idCard = idCard;
+        this.transport = transport;
+        this.transportIdr = transportIdr;
+        this.seatNumber = seatNumber;
+        this.startDay = startDay;
+        this.startMonth = startMonth;
+        this.startYear = startYear;
+        this.endDay = endDay;
+        this.endMonth = endMonth;
+        this.endYear = endYear;
+        this.otherInfor = otherInfor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -26,6 +26,45 @@ public class MedicalReportRepository implements IMedicalReportRepository {
 
     @Override
     public void save(MedicalReport medicalReport) {
+        int id = (int) (Math.random() * 1000);
+        medicalReport.setId(id);
+        medicalReportList.add(medicalReport);
 
+    }
+
+    @Override
+    public void edit(MedicalReport medicalReport) {
+        for (int i = 0; i < medicalReportList.size(); i++) {
+            if (medicalReport.getId() == medicalReportList.get(i).getId()) {
+                medicalReportList.get(i).setName(medicalReport.getName());
+                medicalReportList.get(i).setYearOfBirth(medicalReport.getYearOfBirth());
+                medicalReportList.get(i).setGender(medicalReport.getGender());
+                medicalReportList.get(i).setNationality(medicalReport.getNationality());
+                medicalReportList.get(i).setIdCard(medicalReport.getIdCard());
+                medicalReportList.get(i).setTransport(medicalReport.getTransport());
+                medicalReportList.get(i).setTransportIdr(medicalReport.getTransportIdr());
+                medicalReportList.get(i).setSeatNumber(medicalReport.getSeatNumber());
+                medicalReportList.get(i).setStartDay(medicalReport.getStartDay());
+                medicalReportList.get(i).setStartMonth(medicalReport.getStartMonth());
+                medicalReportList.get(i).setStartYear(medicalReport.getStartYear());
+                medicalReportList.get(i).setEndDay(medicalReport.getEndDay());
+                medicalReportList.get(i).setEndMonth(medicalReport.getEndMonth());
+                medicalReportList.get(i).setEndYear(medicalReport.getEndYear());
+                medicalReportList.get(i).setOtherInfor(medicalReport.getOtherInfor());
+
+
+            }
+        }
+    }
+
+    @Override
+    public MedicalReport findId(int id) {
+        MedicalReport medicalReport= new MedicalReport();
+        for (int i = 0; i < medicalReportList.size() ; i++) {
+            if (id==medicalReportList.get(i).getId()){
+                medicalReport= medicalReportList.get(i);
+            }
+        }
+        return medicalReport;
     }
 }

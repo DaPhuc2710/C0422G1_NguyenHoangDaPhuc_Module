@@ -13,10 +13,9 @@ public class DateService implements IDateService {
     private IDateRepository iDateRepository;
 
     @Override
-    public List<String> findDateAll() {
-        return iDateRepository.findDateAll();
+    public List<String> findDayAll() {
+        return iDateRepository.findDayAll();
     }
-
     @Override
     public List<String> findMonthAll() {
         return iDateRepository.findMonthAll();

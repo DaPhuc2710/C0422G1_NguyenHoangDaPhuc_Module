@@ -18,4 +18,22 @@ public class MedicalReportService implements IMedicalReportService {
     public List<MedicalReport> findAll() {
         return iMedicalReportRepository.findAll();
     }
+
+    @Override
+    public void save(MedicalReport medicalReport) {
+        iMedicalReportRepository.save(medicalReport);
+    }
+
+    @Override
+    public void edit(MedicalReport medicalReport) {
+        iMedicalReportRepository.edit(medicalReport);
+
+    }
+
+    @Override
+    public MedicalReport findId(int id) {
+        return iMedicalReportRepository.findId(id);
+
+    }
 }
+

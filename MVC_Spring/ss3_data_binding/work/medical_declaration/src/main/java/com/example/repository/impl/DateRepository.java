@@ -1,6 +1,5 @@
 package com.example.repository.impl;
 
-import com.example.model.Date;
 import com.example.repository.IDateRepository;
 import org.springframework.stereotype.Repository;
 
@@ -27,7 +26,7 @@ public class DateRepository implements IDateRepository {
 
 
     @Override
-    public List<String> findDateAll() {
+    public List<String> findDayAll() {
         return days;
     }
 
