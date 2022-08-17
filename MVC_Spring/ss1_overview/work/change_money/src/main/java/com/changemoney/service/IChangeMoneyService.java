@@ -1,5 +1,5 @@
 package com.changemoney.service;
 
-public interface IService {
+public interface IChangeMoneyService {
    public Double calculator(double inputMoney, double rate );
 }
