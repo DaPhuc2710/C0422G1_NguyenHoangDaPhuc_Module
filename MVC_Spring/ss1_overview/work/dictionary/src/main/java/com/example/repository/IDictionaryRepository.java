@@ -1,5 +1,5 @@
 package com.example.repository;
 
-public interface IRepository {
+public interface IDictionaryRepository {
     public String dictionary(String word);
 }

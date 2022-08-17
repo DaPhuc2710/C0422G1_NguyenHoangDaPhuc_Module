@@ -1,5 +1,5 @@
 package com.example.service;
 
-public interface IService {
+public interface IDictionaryService {
     public String dictionary(String word);
 }

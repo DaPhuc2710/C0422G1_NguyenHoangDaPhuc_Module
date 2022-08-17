@@ -1,13 +1,13 @@
 package com.example.repository.impl;
 
-import com.example.repository.IRepository;
+import com.example.repository.IDictionaryRepository;
 
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
 @org.springframework.stereotype.Repository
-public class Repository implements IRepository {
+public class DictionaryRepository implements IDictionaryRepository {
     static Map<String, String> dictionaryList = new HashMap<>();
 
     static {

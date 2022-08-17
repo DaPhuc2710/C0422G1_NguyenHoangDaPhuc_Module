@@ -1,12 +1,12 @@
 package com.example.service.impl;
 
-import com.example.repository.IRepository;
-import com.example.service.IService;
+import com.example.repository.IDictionaryRepository;
+import com.example.service.IDictionaryService;
 import org.springframework.beans.factory.annotation.Autowired;
 @org.springframework.stereotype.Service
-public class Service implements IService {
+public class DictionaryService implements IDictionaryService {
     @Autowired
-     private IRepository iRepository;
+     private IDictionaryRepository iRepository;
 
     @Override
     public String dictionary(String word) {

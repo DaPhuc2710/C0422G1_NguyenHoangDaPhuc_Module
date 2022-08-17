@@ -5,12 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.example.service.IService;
+import com.example.service.IDictionaryService;
 
 @Controller
 public class TranslateController {
     @Autowired
-    private IService service;
+    private IDictionaryService service;
     @GetMapping("/main")
     public String insertEnglish(@RequestParam String english, Model model) {
         String result= service.dictionary(english);
