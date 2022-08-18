@@ -9,7 +9,7 @@ import java.util.List;
 
 @Repository
 public class ProductRepository implements IProductRepository {
-    static private List<Product> products = new ArrayList<>();
+    private static List<Product> products = new ArrayList<>();
 
     static {
         products.add(new Product(1, "Dầu ăn", "30000", "Việt Nam"));

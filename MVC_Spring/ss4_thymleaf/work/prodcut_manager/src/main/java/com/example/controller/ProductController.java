@@ -12,7 +12,7 @@ import java.util.List;
 @Controller
 public class ProductController {
     @Autowired
-    IProductService iProductService;
+    private IProductService iProductService;
 
     @RequestMapping("/")
     public String goList(Model model) {
