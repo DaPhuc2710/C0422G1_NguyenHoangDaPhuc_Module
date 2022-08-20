@@ -1,0 +1,2 @@
+
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '6.0.2.Final'

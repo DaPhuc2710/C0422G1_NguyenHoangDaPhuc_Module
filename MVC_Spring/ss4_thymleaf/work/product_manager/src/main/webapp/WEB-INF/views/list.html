@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Page</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/add}">
+        Thêm sản phẩm mới
+    </a>
+</p>
+<p>Tìm theo tên</p>
+<p>
+<form action="/byName"><input type="text" name="name">
+    <button type="submit">Tìm</button>
+</form>
+</p>
+<p>Tìm theo id</p>
+<p>
+<form action="/byId"><input type="text" name="id">
+    <button type="submit">Tìm</button>
+</form>
+</p>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>ID</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá (VND)</th>
+        <th>Xuất Xứ</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product,loop:${productList}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${product.getId()}"></td>
+        <td th:text="${product.getName()}"></td>
+        <td th:text="${product.getPrice()}"></td>
+        <td th:text="${product.getMadeIn()}"></td>
+        <td><a th:href="@{/delete(id=${product.getId()})}">delete</a></td>
+        <td><a th:href="@{/editing(id=${product.getId()})}">edit</a></td>
+        <td><a th:href="@{/viewing(id=${product.getId()})}">view</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
