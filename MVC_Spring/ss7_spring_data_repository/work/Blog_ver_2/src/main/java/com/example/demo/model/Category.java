@@ -17,7 +17,6 @@ public class Category {
 
     public Category() {
     }
-
     public Category(Integer idCate, String cateName, List<Blog> blogs) {
         this.idCate = idCate;
         this.cateName = cateName;

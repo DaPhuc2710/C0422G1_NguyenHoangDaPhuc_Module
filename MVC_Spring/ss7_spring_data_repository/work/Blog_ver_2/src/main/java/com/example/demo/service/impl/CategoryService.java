@@ -19,4 +19,9 @@ public class CategoryService implements ICategoryService {
         return iCategoryRepository.findAll();
     }
 
+    @Override
+    public Category findById(int id) {
+        return null;
+    }
+
 }
