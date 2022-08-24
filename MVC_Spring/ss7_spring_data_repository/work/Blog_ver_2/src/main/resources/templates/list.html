@@ -7,6 +7,8 @@
 </head>
 <body>
 <a href="/create">Thêm bài blog</a>
+
+<a href="/categories">Xem thể loại</a>
 <table class="table table-success">
     <thead>
     <tr>
@@ -31,5 +33,16 @@
     </tr>
     </tbody>
 </table>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item"><a class="page-link" th:href="@{/list(page=${blogList.number -1 })}"
+                                 th:if="${blogList.hasPrevious()}">Previous</a></li>
+        <li class="page-item"><span th:text="${blogList.number +1}"></span></li>
+        <li class="page-item"><span>/</span></li>
+        <li class="page-item"><span th:text="${blogList.getTotalPages()}"></span></li>
+        <li class="page-item"><a class="page-link" th:href="@{/list(page=${blogList.number +1 })}"
+                                 th:if="${blogList.hasNext()}">Next</a></li>
+    </ul>
+</nav>
 </body>
 </html>

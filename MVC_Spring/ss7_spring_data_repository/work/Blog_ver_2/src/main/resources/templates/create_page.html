@@ -27,8 +27,12 @@
         <input type="text" class="form-control" id="exampleFormControlInput4" th:field="*{content}">
     </div>
     <div class="mb-3">
-        <label for="exampleFormControlInput5" class="form-label">Thể loại</label>
-        <input type="text" class="form-control" id="exampleFormControlInput5" th:field="*{category}">
+        <label>Thể loại</label>
+        <select th:field="*{category}" class="form-select">
+            <option th:each="categoryList,loop:${categories}"
+                    th:value="${categoryList.getIdCate()}"
+                    th:text="${categoryList.getCateName()}"></option>
+        </select>
     </div>
     <div class="mb-3">
         <button type="submit">Lưu</button>

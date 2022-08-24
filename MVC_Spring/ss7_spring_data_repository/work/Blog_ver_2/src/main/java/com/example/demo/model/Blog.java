@@ -13,44 +13,20 @@ public class Blog {
     private String name;
     private String content;
     private String age;
-
-    private String category;
+    @ManyToOne
+    @JoinColumn(name = "id_category", nullable = false, referencedColumnName = "id_category")
+    private Category category;
 
     public Blog() {
     }
 
-
-    public Blog(Integer id, String artist, String name, String content, String age, String category) {
+    public Blog(Integer id, String artist, String name, String content, String age, Category category) {
         this.id = id;
         this.artist = artist;
         this.name = name;
         this.content = content;
         this.age = age;
         this.category = category;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String name) {
-        this.content = name;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
     }
 
     public Integer getId() {
@@ -61,12 +37,12 @@ public class Blog {
         this.id = id;
     }
 
-    public String getCategory() {
-        return category;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
     public String getName() {
@@ -75,5 +51,29 @@ public class Blog {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
