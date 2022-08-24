@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang thêm mới</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<p><a href="/">Về lại trang List</a></p>
+<h1 class="text-center ">Chỉnh sửa</h1>
+<form class="container-fluid w-25 shadow" action="/saveUpdateForm" method="post" th:object="${blog}"
+      enctype="multipart/form-data">
+
+    <div class="mb-3">
+        <input type="hidden" class="form-control"  th:field="*{id}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Tên tác giả</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" th:field="*{artist}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Tên bài viết</label>
+        <input type="text" class="form-control" id="exampleFormControlInput2" th:field="*{name}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label">Tuổi</label>
+        <input type="text" class="form-control" id="exampleFormControlInput3" th:field="*{age}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput4" class="form-label">Nội dung</label>
+        <input type="text" class="form-control" id="exampleFormControlInput4" th:field="*{content}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput5" class="form-label">Thể loại</label>
+        <input type="text" class="form-control" id="exampleFormControlInput5" th:field="*{category}">
+    </div>
+    <div class="mb-3">
+        <button type="submit">Lưu</button>
+    </div>
+</form>
+</body>
+</html>

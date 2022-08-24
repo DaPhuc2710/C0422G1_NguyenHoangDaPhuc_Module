@@ -1,5 +1,7 @@
 package com.example.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,19 +14,14 @@ public class MusicApp {
     private String name;
     @Column
     private String artist;
-    @Column (name = "type_of_music")
+    @Column(name = "type_of_music")
     private String typeOfMusic;
     @Column
     private String link;
+    @Transient
+    private transient MultipartFile imgFile;
 
     public MusicApp() {
-    }
-
-    public MusicApp(String name, String artist, String typeOfMusic, String link) {
-        this.name = name;
-        this.artist = artist;
-        this.typeOfMusic = typeOfMusic;
-        this.link = link;
     }
 
     public MusicApp(Integer id, String name, String artist, String typeOfMusic, String link) {
@@ -33,6 +30,23 @@ public class MusicApp {
         this.artist = artist;
         this.typeOfMusic = typeOfMusic;
         this.link = link;
+    }
+
+    public MusicApp(Integer id, String name, String artist, String typeOfMusic, String link, MultipartFile imgFile) {
+        this.id = id;
+        this.name = name;
+        this.artist = artist;
+        this.typeOfMusic = typeOfMusic;
+        this.link = link;
+        this.imgFile = imgFile;
+    }
+
+    public MusicApp(String name, String artist, String typeOfMusic, String link, MultipartFile imgFile) {
+        this.name = name;
+        this.artist = artist;
+        this.typeOfMusic = typeOfMusic;
+        this.link = link;
+        this.imgFile = imgFile;
     }
 
     public Integer getId() {
@@ -65,6 +79,14 @@ public class MusicApp {
 
     public void setTypeOfMusic(String typeOfMusic) {
         this.typeOfMusic = typeOfMusic;
+    }
+
+    public MultipartFile getImgFile() {
+        return imgFile;
+    }
+
+    public void setImgFile(MultipartFile imgFile) {
+        this.imgFile = imgFile;
     }
 
     public String getLink() {

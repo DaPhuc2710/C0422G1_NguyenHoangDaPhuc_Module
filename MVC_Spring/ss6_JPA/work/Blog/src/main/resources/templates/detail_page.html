@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<p><a href="/">Về lại trang List</a></p>
+<p>Tên bài viết <span th:text="${theBlog.name}"></span></p>
+<p>Tên tác giả <span th:text="${theBlog.artist}"></span></p>
+<p>Tuổi <span th:text="${theBlog.age}"></span></p>
+<p>Nội dung bài viết <span th:text="${theBlog.content}"></span></p>
+<p>Thể loại <span th:text="${theBlog.category}"></span></p>
+
+</body>
+</html>

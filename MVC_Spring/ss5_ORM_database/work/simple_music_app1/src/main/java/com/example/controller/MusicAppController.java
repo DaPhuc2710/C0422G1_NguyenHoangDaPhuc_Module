@@ -25,9 +25,8 @@ public class MusicAppController {
     }
 
     @PostMapping("/saveAdd")
-    public String goSaveCreate(MusicApp musicApp, Model model) {
+    public String goSaveCreate(@ModelAttribute MusicApp musicApp) {
         iMusicAppService.create(musicApp);
-        model.addAttribute("musicAppList", iMusicAppService.findAll());
         return "redirect:/";
     }
 
@@ -45,7 +44,7 @@ public class MusicAppController {
         return "/edit";
     }
     @PostMapping("/saveEdit")
-    public String goSaveEdit(@ModelAttribute MusicApp musicApp, Model model) {
+    public String goSaveEdit(@ModelAttribute MusicApp musicApp) {
         iMusicAppService.update(musicApp);
         return "redirect:/";
     }
