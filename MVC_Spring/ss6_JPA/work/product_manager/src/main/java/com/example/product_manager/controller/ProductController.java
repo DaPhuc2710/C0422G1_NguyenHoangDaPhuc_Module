@@ -1,17 +1,19 @@
-package com.example.controller;
+package com.example.product_manager.controller;
 
-import com.example.model.Product;
-import com.example.service.IProductService;
+import com.example.product_manager.model.Product;
+import com.example.product_manager.service.IProductService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.List;
 
 @Controller
 public class ProductController {
@@ -40,16 +42,16 @@ public class ProductController {
     }
 
     @GetMapping("/byId")
-    public String findId(@RequestParam int id, Model model) {
+    public String findId(@RequestParam Integer id, Model model) {
         Product product = iProductService.findById(id);
         model.addAttribute("productList", product);
         return "/list";
     }
 
     @GetMapping("/editing")
-    public String edit(@ModelAttribute int id, Model model) {
-        Product product = iProductService.findById(id);
-        model.addAttribute("product1", product);
+    public String edit(@ModelAttribute Integer id, Model model) {
+        iProductService.findById(id);
+        model.addAttribute("product", iProductService.findById(id));
         return "/edit";
     }
 
@@ -61,7 +63,7 @@ public class ProductController {
     }
 
     @GetMapping("/viewing")
-    public String viewIn(@RequestParam int id, Model model) {
+    public String viewIn(@RequestParam Integer id, Model model) {
         Product product = iProductService.findById(id);
         model.addAttribute("product1", product);
         return "/view";

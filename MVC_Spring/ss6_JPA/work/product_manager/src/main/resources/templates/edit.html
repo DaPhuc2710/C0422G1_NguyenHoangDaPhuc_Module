@@ -8,8 +8,8 @@
 <a href="/">
     Back to Product list
 </a>
-<form action="/saveEdit" method="post" th:object="${product1}">
-    <input type="text" th:field="*{id} " hidden>
+<form action="/saveEdit" method="post" th:object="${product}">
+    <input type="hidden" th:field="*{id}">
     <p>Nhập tên</p>
     <input type="text" th:field="*{name}">
     <br>

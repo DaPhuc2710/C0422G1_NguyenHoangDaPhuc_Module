@@ -1,9 +1,8 @@
-package com.example.service.impl;
+package com.example.product_manager.service.impl;
 
-
-import com.example.model.Product;
-import com.example.repository.IProductRepository;
-import com.example.service.IProductService;
+import com.example.product_manager.model.Product;
+import com.example.product_manager.repository.IProductRepository;
+import com.example.product_manager.service.IProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -34,7 +33,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Product findById(int id) {
+    public Product findById(Integer id) {
         return iProductRepository.findById(id).get();
     }
 }

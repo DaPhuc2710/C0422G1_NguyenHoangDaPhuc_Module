@@ -1,7 +1,8 @@
-package com.example.repository;
+package com.example.product_manager.repository;
 
 
-import com.example.model.Product;
+
+import com.example.product_manager.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

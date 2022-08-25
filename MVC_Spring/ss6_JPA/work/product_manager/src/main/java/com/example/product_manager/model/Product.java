@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.product_manager.model;
 
 import javax.persistence.*;
 
@@ -16,18 +16,18 @@ public class Product {
     public Product() {
     }
 
-    public Product(int id, String name, String price, String madeIn) {
+    public Product(Integer id, String name, String price, String madeIn) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.madeIn = madeIn;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

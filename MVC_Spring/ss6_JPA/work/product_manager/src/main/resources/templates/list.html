@@ -10,18 +10,15 @@
         Thêm sản phẩm mới
     </a>
 </p>
-<p>Tìm theo tên</p>
-<p>
-<form action="/byName"><input type="text" name="name">
-    <button type="submit">Tìm</button>
-</form>
-</p>
 <p>Tìm theo id</p>
 <p>
 <form action="/byId"><input type="text" name="id">
     <button type="submit">Tìm</button>
 </form>
 </p>
+<div th:if="${msg != null}">
+    <p style="color: red" th:text="${msg}"></p>
+</div>
 <table>
     <thead>
     <tr>
@@ -30,23 +27,26 @@
         <th>Tên sản phẩm</th>
         <th>Giá (VND)</th>
         <th>Xuất Xứ</th>
-        <th>Delete</th>
         <th>Edit</th>
         <th>View</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="product,loop:${productList}">
+    <tr th:each="productList,loop:${productList}">
         <td th:text="${loop.count}"></td>
-        <td th:text="${product.id}"></td>
-        <td th:text="${product.getName()}"></td>
-        <td th:text="${product.getPrice()}"></td>
-        <td th:text="${product.getMadeIn()}"></td>
-        <td><a th:href="@{/delete(id=${product.getId()})}">delete</a></td>
-        <td><a th:href="@{/editing(id=${product.getId()})}">edit</a></td>
-        <td><a th:href="@{/viewing(id=${product.getId()})}">view</a></td>
+        <td th:text="${productList.id}"></td>
+        <td th:text="${productList.name}"></td>
+        <td th:text="${productList.price}"></td>
+        <td th:text="${productList.madeIn}"></td>
+        <td><a th:href="@{/editing(id=${productList.id})}">edit</a></td>
+        <td><a th:href="@{/viewing(id=${productList.id})}">view</a></td>
     </tr>
     </tbody>
 </table>
+<div>
+    <a th:href="@{'/'(page=${productList.number - 1},name=${name})}" th:if="${productList.hasPrevious()}">Previous</a>
+    <span th:text="${productList.number + 1}"></span>/<span th:text="${productList.totalPages}"></span>
+    <a th:href="@{'/'(page=${productList.number + 1},name=${name})}" th:if="${productList.hasNext()}">Next</a>
+</div>
 </body>
 </html>

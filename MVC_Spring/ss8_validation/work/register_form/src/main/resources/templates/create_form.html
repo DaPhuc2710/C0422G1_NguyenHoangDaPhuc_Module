@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/saveCreateForm" method="post" th:object="${userDto}">
+    <p>Nhập tên</p>
+    <input type="text" th:field="*{firstName}">
+    <span th:errors="*{firstName}"></span>
+    <p>Nhập họ</p>
+    <input type="text" th:field="*{lastName}">
+    <span th:errors="*{lastName}"></span>
+    <p>Nhập SĐT</p>
+    <input type="text" th:field="*{phoneNumber}">
+    <span th:errors="*{phoneNumber}"></span>
+    <p>Nhập email</p>
+    <input type="text" th:field="*{email}">
+    <span th:errors="*{email}"></span>
+    <p>Nhập age</p>
+    <input type="text" th:field="*{age}">
+    <span th:errors="*{age}"></span>
+    <button type="submit">Lưu</button>
+</form>
+</body>
+</html>

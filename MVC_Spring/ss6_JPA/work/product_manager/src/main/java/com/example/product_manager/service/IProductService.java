@@ -1,19 +1,16 @@
-package com.example.service;
+package com.example.product_manager.service;
 
-import com.example.model.Product;
+
+import com.example.product_manager.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 
-
 public interface IProductService {
-    Page<Product> findByName(String name ,Pageable pageable);
+    Page<Product> findByName(String name , Pageable pageable);
 
     void add(Product product);
-
-
-
     void update(Product product);
 
-    Product findById(int id);
+    Product findById(Integer id);
 }

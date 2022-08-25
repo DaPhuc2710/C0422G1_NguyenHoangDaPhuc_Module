@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">Thêm bài nhạc</a>
+<table>
+    <tr>
+        <th>Tên bài hát</th>
+        <th>Nghệ sĩ</th>
+        <th>Loại nhạc</th>
+    </tr>
+    <tr th:each="songL,loop:${songList}">
+        <td th:text="${songL.songName}"></td>
+        <td th:text="${songL.artist}"></td>
+        <td th:text="${songL.typeOfMusic}"></td>
+    </tr>
+</table>
+</body>
+</html>

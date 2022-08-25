@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<a href="/create">Thêm mới người dùng</a>
+<body>
+<table>
+    <tr>
+        <th>Tên</th>
+        <th>Họ</th>
+        <th>SĐT</th>
+        <th>Email</th>
+        <th>Tuổi</th>
+    </tr>
+    <tr th:each="lists,loop: ${userList}">
+        <td th:text="${lists.firstName}"></td>
+        <td th:text="${lists.lastName}"></td>
+        <td th:text="${lists.phoneNumber}"></td>
+        <td th:text="${lists.email}"></td>
+        <td th:text="${lists.age}"></td>
+    </tr>
+</table>
+</body>
+</html>
