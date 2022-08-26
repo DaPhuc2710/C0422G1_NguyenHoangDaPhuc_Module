@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+</head>
+<body>
+
+<i class="bi bi-arrow-return-left"><a href="/">Về lại trang List</a></i>
+<ul class="list-group list-group-horizontal">
+    <li class="list-group-item list-group-item-info">Tên sách</li>
+    <li class="list-group-item list-group-item-info">Mã sách</li>
+    <li class="list-group-item list-group-item-info">Tác giả</li>
+    <li class="list-group-item list-group-item-info">Thể Loại</li>
+    <li class="list-group-item list-group-item-info">Tổng sách</li>
+    <li class="list-group-item list-group-item-info">Còn lại</li>
+</ul>
+<ul class="list-group list-group-horizontal-sm">
+    <li class="list-group-item list-group-item-info" th:text="${book.name}"></li>
+    <li class="list-group-item list-group-item-info" th:text="${book.bookCode}"></li>
+    <li class="list-group-item list-group-item-info" th:text="${book.author}"></li>
+    <li class="list-group-item list-group-item-info" th:text="${book.category}"></li>
+    <li class="list-group-item list-group-item-info" th:text="${book.total}"></li>
+    <li class="list-group-item list-group-item-info" th:text="${book.remaining}"></li>
+</ul>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Bấm vào để mượn
+</button>
+
+</body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="/borrow">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có muốn mượn không</p>
+                    <input type="hidden" th:value="${book.id}" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
+</head>
+<body>
+<table class="table  table-success table-striped">
+    <thead>
+    <tr>
+        <th scope="col">STT</th>
+        <th scope="col">ID</th>
+        <th scope="col">Tên sách</th>
+        <th scope="col">Mã sách</th>
+        <th scope="col">Tác giả</th>
+        <th scope="col">Thể Loại</th>
+        <th scope="col">Tổng sách</th>
+        <th scope="col">Còn lại</th>
+        <th scope="col">Chi tiết</th>
+        <th scope="col">Mượn</th>
+        <th scope="col">Trả</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="list,loop:${bookList}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${list.id}"></td>
+        <td th:text="${list.name}"></td>
+        <td th:text="${list.bookCode}"></td>
+        <td th:text="${list.author}"></td>
+        <td th:text="${list.category}"></td>
+        <td th:text="${list.total}"></td>
+        <td th:text="${list.remaining}"></td>
+        <td><a th:href="@{/detailList(id=${list.id})}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-archive-fill" viewBox="0 0 16 16">
+                <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
+            </svg>
+        </a>
+        </td>
+        <td>
+            <div class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <form action="/borrow">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Bạn có muốn mượn không</p>
+                                <input type="hidden" th:value="${list.id}" name="id">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </td>
+        <td>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-bookmark-plus-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zm6.5-11a.5.5 0 0 0-1 0V6H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V7H10a.5.5 0 0 0 0-1H8.5V4.5z"/>
+            </svg>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
