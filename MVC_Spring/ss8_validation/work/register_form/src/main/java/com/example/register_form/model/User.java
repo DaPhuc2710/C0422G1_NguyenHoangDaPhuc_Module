@@ -16,7 +16,7 @@ public class User {
 
     private String phoneNumber;
 
-    private int age;
+    private String age;
 
     private String email;
 
@@ -55,11 +55,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
