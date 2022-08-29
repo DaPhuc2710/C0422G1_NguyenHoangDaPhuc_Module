@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flower List</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Price</th>
+        <th>Name</th>
+        <th>Picture</th>
+        <th>Description</th>
+        <th>Buy</th>
+    </tr>
+    <tr th:each="flowers:${flowerList}">
+        <td th:text="${flowers.id}"></td>
+        <td th:text="${flowers.price}"></td>
+        <td th:text="${flowers.name}"></td>
+        <td><img th:src="${flowers.link}" width="120px"></td>
+        <td th:text="${flowers.description}"></td>
+        <td><a th:href="'/cart/buy'+${flowers.id}">Buy Now</a></td>
+    </tr>
+</table>
+
+</body>
+</html>
