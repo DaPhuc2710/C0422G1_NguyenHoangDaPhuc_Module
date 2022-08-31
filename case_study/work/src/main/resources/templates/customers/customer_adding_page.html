@@ -13,7 +13,7 @@
 <body>
 <h1 class="text-center">Thêm khách hàng mới</h1>
 <form class="container-fluid w-25 shadow"  action="/saveCustomer" method="post" th:object="${customerList}">
-    <input type="hidden"  th:field="*{idCustomer}">
+<!--    <input type="hidden"  th:field="*{idCustomer}">-->
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Họ tên</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp "
@@ -50,7 +50,8 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Loại khách </label>
-        <select th:field="*{customerType}">
+<!--        nhớ chấm id vì nó covert lại thằng CustomerType-->
+        <select th:field="*{customerType.ma_loai_khach}">
             <option th:each="typeCus:${type}" th:value="${typeCus.ma_loai_khach}"
                     th:text="${typeCus.customerTypeName}"></option>
         </select>

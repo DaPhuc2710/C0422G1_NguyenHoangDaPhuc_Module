@@ -25,7 +25,9 @@ public class CustomerController {
     private ICustomerTypeService iCustomerTypeService;
 
     @GetMapping("/listCustomer")
-    public String goListCustomer(Model model, @PageableDefault(size = 5) Pageable pageable, @RequestParam Optional<String> key) {
+    public String goListCustomer(Model model,
+                                 @PageableDefault(size = 5) Pageable pageable,
+                                 @RequestParam Optional<String> key) {
         String keyVal = key.orElse("");
         model.addAttribute("customerList", iCustomerService.findAllByNameCustomerContaining(keyVal, pageable));
         model.addAttribute("keyVal", keyVal);
@@ -35,7 +37,7 @@ public class CustomerController {
     @GetMapping("/addCustomer")
     public String goAddCustomer(Model model) {
         model.addAttribute("customerList", new Customer());
-        model.addAttribute("type",iCustomerTypeService.findAll());
+        model.addAttribute("type", iCustomerTypeService.findAll());
         return "/customers/customer_adding_page";
     }
 
@@ -46,4 +48,24 @@ public class CustomerController {
         return "redirect:/listCustomer";
     }
 
+    @GetMapping("/getDetele")
+    public String goDelete(@RequestParam int deleteId) {
+        iCustomerService.delete(deleteId);
+        return "redirect:/listCustomer";
+
+    }
+
+    @GetMapping("/goUpdate")
+    public String goUpdate(int id, Model model) {
+        model.addAttribute("customer", iCustomerService.findById(id).get());
+        model.addAttribute("type", iCustomerTypeService.findAll());
+        return "/customers/customer_update_page";
+    }
+
+    @PostMapping("/saveUpdate")
+    public String saveUpdate(@ModelAttribute Customer customer, RedirectAttributes redirectAttributes) {
+        iCustomerService.update(customer);
+        redirectAttributes.addFlashAttribute("msg", "Sửa thành công");
+        return "redirect:/listCustomer";
+    }
 }

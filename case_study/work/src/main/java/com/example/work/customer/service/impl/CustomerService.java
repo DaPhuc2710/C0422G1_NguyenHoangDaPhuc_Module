@@ -17,17 +17,12 @@ public class CustomerService implements ICustomerService {
     ICustomerRepository iCustomerRepository;
 
     @Override
-    public List<Customer> findAll() {
-        return iCustomerRepository.findAll();
+    public void delete(Integer id) {
+        iCustomerRepository.deleteById(id);
     }
 
     @Override
-    public void delete(Customer customer) {
-        iCustomerRepository.delete(customer);
-    }
-
-    @Override
-    public Optional<Customer> findById(int id) {
+    public Optional<Customer> findById(Integer id) {
         return iCustomerRepository.findById(id);
     }
 

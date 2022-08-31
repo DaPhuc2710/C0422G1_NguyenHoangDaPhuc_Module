@@ -9,59 +9,57 @@
 </head>
 <body>
 <h1 class="text-center">Chỉnh sửa khách hàng </h1>
-<form class="m-auto w-25" method="post" action="/customer?action=update">
+<form class="m-auto w-25" method="post" action="/saveUpdate" th:object="${customer}">
     <div class="mb-3">
         <label for="exampleInputEmail11" class="form-label">Mã Khách Hàng</label>
         <input type="text" class="form-control" id="exampleInputEmail11" aria-describedby="emailHelp" name="customerId"
-               value="${customer.customerId}">
-
+               th:field="*{idCustomer}">
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Họ tên</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="name"
-               value="${customer.name}">
-        <p class="text-warning">${errors.get('name')}</p>
+               th:field="*{nameCustomer}">
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail2" class="form-label">Ngày sinh </label>
         <input type="date" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="dOfB"
-               value="${customer.dOfB}">
-
+               th:field="*{dateOfBirth}">
     </div>
     <div class="mb-3">
         <label class="form-label">Giới tính</label>
-        <select name="gender">
+        <select th:field="*{gender}" class="form-select">
+            <option th:value="1">Nam</option>
+            <option th:value="0">Nữ</option>
         </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail3" class="form-label">Số CMND </label>
         <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" name="CMND"
-               value="${customer.CMND}">
-        <p class="text-warning">${errors.get('CMND')}</p>
+               th:field="*{idNumber}">
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail4" class="form-label">Số ĐT </label>
         <input type="text" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" name="telephone"
-               value="${customer.telephone}">
-        <p class="text-warning">${errors.get('telephone')}</p>
+               th:field="*{phoneNumber}">
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail5" class="form-label">Email </label>
         <input type="text" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp" name="email"
-               value="${customer.email}">
-        <p class="text-warning">${errors.get('email')}</p>
+               th:field="*{email}">
 
     </div>
     <div class="mb-3">
         <label class="form-label">Loại khách </label>
-        <select name="customerCodeType">
+        <select th:field="*{customerType.ma_loai_khach}">
+            <option th:each="typeCus:${type}" th:value="${typeCus.ma_loai_khach}"
+                    th:text="${typeCus.customerTypeName}"></option>
+
         </select>
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail6" class="form-label">Địa chỉ </label>
         <input type="text" class="form-control" id="exampleInputEmail6" aria-describedby="emailHelp" name="address"
-               value="${customer.address}">
-        <p class="text-warning">${errors.get('address')}</p>
+               th:field="*{address}">
     </div>
     <button type="submit" class="btn btn-primary">Lưu</button>
 </form>

@@ -12,8 +12,8 @@
 <body>
 <div class=" text-center mt-3"><h3>Danh sách khách hàng</h3></div>
 <form class="d-flex container-fluid mt-3 w-50" action="/customer" method="get">
-<!--    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" hidden name="action"-->
-<!--           value="search">-->
+    <!--    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" hidden name="action"-->
+    <!--           value="search">-->
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="key">
     <button class="btn btn-outline-success">Search</button>
 </form>
@@ -52,7 +52,7 @@
                 <td th:text="${customer.email}"></td>
                 <td th:text="${customer.address}"></td>
                 <td>
-                    <button onclick="xoa('${customer.customerId}')" type="button" class="btn btn-primary"
+                    <button th:onclick="|deLete('${customer.idCustomer}')|" type="button" class="btn btn-primary"
                             data-bs-toggle="modal"
                             data-bs-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -64,7 +64,7 @@
                     </button>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="/customer?action=update&id=${customer.customerId}"
+                    <a class="btn btn-primary" th:href="@{/goUpdate(id=${customer.idCustomer})}"
                        role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                              class="bi bi-pen"
@@ -87,23 +87,31 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <input type="text" name="deleteId" id="deleteId">
-                Bạn có chắc là xóa khách hàng này không ?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No
-                </button>
-                <button id="confirm" type="submit" class="btn btn-primary"></button>
-            </div>
+            <form action="/getDetele" method="get">
+                <div class="modal-body">
+                    <input type="text" name="deleteId" id="deleteId" readonly>
+                    Bạn có chắc là xóa khách hàng này không ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No
+                    </button>
+                    <button type="submit" class="btn btn-primary">Yes</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 <div>
-    <a th:href="@{'/listCustomer'(page=${customerList.number - 1}, key = ${keyVal})}" th:if="${customerList.hasPrevious()}">Previous</a>
+    <a th:href="@{'/listCustomer'(page=${customerList.number - 1}, key = ${keyVal})}"
+       th:if="${customerList.hasPrevious()}">Previous</a>
     <span th:text="${customerList.number + 1}"></span>/<span th:text="${customerList.totalPages}"></span>
     <a th:href="@{'/listCustomer'(page=${customerList.number + 1}, key = ${keyVal})}" th:if="${customerList.hasNext()}">Next</a>
 </div>
 </body>
 <footer th:replace="fragment::html_footer"></footer>
+<script>
+    function deLete(id) {
+        document.getElementById("deleteId").value = id;
+    }
+</script>
 </html>
