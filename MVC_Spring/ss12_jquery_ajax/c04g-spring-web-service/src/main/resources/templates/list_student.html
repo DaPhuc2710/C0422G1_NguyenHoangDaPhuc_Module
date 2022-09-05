@@ -1,0 +1,131 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Student</title>
+    <!-- Font Awesome -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+            rel="stylesheet"
+    />
+</head>
+<body>
+    <nav th:replace="~{common_student :: header}"></nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>List Student</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="/student/create">Register student</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-success" th:text="${msg}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="/student/list">
+                <div class="input-group mb-3">
+                    <input
+                            type="text"
+                            class="form-control"
+                            aria-describedby="button-addon2"
+                            name="keyword"
+                    />
+                    <button class="btn btn-outline-primary" type="submit" id="button-addon2" data-mdb-ripple-color="dark">
+                        Search
+                    </button>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Date of birth</th>
+                            <th scope="col">Class</th>
+                            <th scope="col" colspan="3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+<!--                        <c:forEach var="studentObj" items="${studentList}" varStatus="loop">-->
+                            <tr th:each="studentObj, loop : ${studentList}">
+                                <th scope="row" th:text="${loop.count}"></th>
+                                <td th:text="${studentObj.id}"></td>
+                                <td th:text="${studentObj.name}"></td>
+                                <td th:text="${studentObj.dateOfBirth}"></td>
+                                <td th:text="${studentObj.classCG.name}"></td>
+                                <td>
+                                    <a th:href="@{/student/detail(id=${studentObj.id})}">
+                                        Detail (RP)
+                                    </a>
+                                </td>
+                                <td>
+                                    <a th:href="@{/student/detail/{id}(id=${studentObj.id})}">
+                                        Detail (PV)
+                                    </a>
+                                </td>
+                                <td>
+                                    <a th:href="@{/student/addToTalk/{id}(id=${studentObj.id})}">
+                                        Add to talk
+                                    </a>
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link"
+                           th:href="@{/student/list(page=${studentList.number - 1}, keyword = ${keywordVal})}"
+                           th:if="${studentList.hasPrevious()}">
+                            Previous
+                        </a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">
+                            <th:block th:text="${studentList.number + 1}"></th:block>
+                            /
+                            <th:block th:text="${studentList.totalPages}"></th:block>
+                        </span>
+
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link"
+                           th:href="@{/student/list(page=${studentList.number + 1}, keyword = ${keywordVal})}"
+                           th:if="${studentList.hasNext()}">
+                            Next
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MDB -->
+    <script
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"
+    ></script>
+</body>
+</html>

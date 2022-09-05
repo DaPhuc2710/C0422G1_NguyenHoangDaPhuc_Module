@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="343bca8a-42a8-4b37-b8bc-66a077f52d44" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../practice/blog_101/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/controller/SmartphoneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/controller/SmartphoneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/model/Smartphone.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/model/Smartphone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/repository/ISmartphoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/service/ISmartphoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/service/ISmartphoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/service/impl/SmartphoneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/java/com/example/phone_management/service/impl/SmartphoneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/phone_management/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/phone_management/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/show_hide/hide_and_show.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/show_hide/hide_and_show.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2ELQdcqJoCsvRaq3BzYiKSLDnU7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="PhoneManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Phone_management.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.phone_management.PhoneManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="343bca8a-42a8-4b37-b8bc-66a077f52d44" name="Changes" comment="" />
+      <created>1662372499279</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662372499279</updated>
+      <workItem from="1662372500621" duration="693000" />
+      <workItem from="1662378281093" duration="181000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

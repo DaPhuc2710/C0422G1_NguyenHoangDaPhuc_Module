@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>If you click on the "Hide" button, I will disappear.</p>
+    <button onclick="hideText()">Hide</button>
+    <button onclick="showText()">Show</button>
+
+    <script>
+        function hideText() {
+            document.getElementsByTagName("p")[0].style.display = "none";
+        }
+
+        function showText() {
+            document.getElementsByTagName("p")[0].style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
