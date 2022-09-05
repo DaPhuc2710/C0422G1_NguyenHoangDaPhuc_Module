@@ -1,0 +1,19 @@
+.header-logo {
+    background-color: #a50064;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    padding: 5px;
+}
+
+.text-momo {
+    color: #a50064;
+}
+
+.bg-momo {
+    background-color: #a50064;
+}
