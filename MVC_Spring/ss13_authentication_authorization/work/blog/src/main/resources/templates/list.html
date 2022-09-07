@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<!--<form action="/search" id="formSeachCategory">-->
+<!--    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search"-->
+<!--           th:value="${search}">-->
+<!--    <button class="btn btn-outline-success" type="button" th:onclick="|submitForm()|">Search</button>-->
+<!--    <select class="form-select" aria-label="Default select example" type="text" onchange="submitForm()"-->
+<!--            name="category" >-->
+<!--        &lt;!&ndash;            <option selected value="0">Thể loại</option>&ndash;&gt;-->
+<!--        <option th:each="cate : ${categorylist}"-->
+<!--                th:value="${cate.id}"-->
+<!--                th:text="${cate.category}"></option>-->
+<!--    </select>-->
+<!--</form>-->
+<a href="/create">Thêm bài blog</a>
+<a href="/categories">Xem thể loại</a>
+<th:block th:include="/_menu"></th:block>
+<table class="table table-success">
+    <thead>
+    <tr>
+        <th scope="col">STT</th>
+        <th scope="col">ID</th>
+        <th scope="col">Tên tác giả</th>
+        <th scope="col">tên bài blog</th>
+        <td>Xóa</td>
+        <td>Chi tiết</td>
+        <td>Chỉnh sửa</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog,loop:${list} ">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${blog.getId()}"></td>
+        <td th:text="${blog.getArtist()}"></td>
+        <td th:text="${blog.getName()}"></td>
+        <td><a th:href="@{/delete(id=${blog.id})}">Xoá</a></td>
+        <td><a th:href="@{/detail(id=${blog.id})}">Xem</a></td>
+        <td><a th:href="@{/update(id=${blog.id})}">Chỉnh sửa</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <div class="container-fluid">
+        <a th:href="@{/blogList(page=${list.number - 1}, search=${search}, catelogy=${cately})}">Trước</a>
+        <span th:text="${list.number + 1}"></span>
+        /
+        <span th:text="${list.totalPages}"></span>
+        <a th:href="@{/blogList(page=${list.number + 1}, search=${search}, catelogy=${cately})}">Sau</a>
+    </div>
+</div>
+</body>
+</html>

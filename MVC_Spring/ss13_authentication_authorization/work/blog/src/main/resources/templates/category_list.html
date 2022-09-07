@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<p><a href="/blogList">Về lại trang List</a></p>
+<table class="table table-success">
+    <thead>
+    <tr>
+        <th scope="col">STT</th>
+        <th scope="col">ID</th>
+        <th scope="col">Tên thể loại</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category,loop:${categoryList}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${category.getIdCate()}"></td>
+        <td th:text="${category.getCateName()}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
