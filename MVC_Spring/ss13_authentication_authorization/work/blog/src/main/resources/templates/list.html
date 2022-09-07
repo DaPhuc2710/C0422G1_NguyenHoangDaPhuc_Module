@@ -18,7 +18,7 @@
 <!--                th:text="${cate.category}"></option>-->
 <!--    </select>-->
 <!--</form>-->
-<a href="/create">Thêm bài blog</a>
+<div th:if="${admin !=null && admin.equals('ADMIN')}"><a href="/create">Thêm bài blog</a></div>
 <a href="/categories">Xem thể loại</a>
 <th:block th:include="/_menu"></th:block>
 <table class="table table-success">
@@ -28,9 +28,9 @@
         <th scope="col">ID</th>
         <th scope="col">Tên tác giả</th>
         <th scope="col">tên bài blog</th>
-        <td>Xóa</td>
+        <td th:if="${admin !=null && admin.equals('ADMIN')}">Xóa</td>
         <td>Chi tiết</td>
-        <td>Chỉnh sửa</td>
+        <td th:if="${admin !=null && admin.equals('ADMIN')}">Chỉnh sửa</td>
     </tr>
     </thead>
     <tbody>
@@ -39,9 +39,11 @@
         <td th:text="${blog.getId()}"></td>
         <td th:text="${blog.getArtist()}"></td>
         <td th:text="${blog.getName()}"></td>
-        <td><a th:href="@{/delete(id=${blog.id})}">Xoá</a></td>
+        <td th:if="${admin !=null && admin.equals('ADMIN')}">
+            <a th:href="@{/delete(id=${blog.id})}">Xoá</a></td>
         <td><a th:href="@{/detail(id=${blog.id})}">Xem</a></td>
-        <td><a th:href="@{/update(id=${blog.id})}">Chỉnh sửa</a></td>
+        <td th:if="${admin !=null && admin.equals('ADMIN')}">
+            <a th:href="@{/update(id=${blog.id})}">Chỉnh sửa</a></td>
     </tr>
     </tbody>
 </table>

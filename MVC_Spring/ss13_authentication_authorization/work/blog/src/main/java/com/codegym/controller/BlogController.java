@@ -9,10 +9,15 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import java.security.Principal;
 
 @Controller
 public class BlogController {
@@ -25,7 +30,7 @@ public class BlogController {
     public String goList(Model model,
                          @RequestParam(required = false, defaultValue = "") String search,
                          @RequestParam(required = false, defaultValue = "0") Integer category,
-                         @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
+                         @PageableDefault(size = 3, sort = "id", direction = Sort.Direction.ASC) Pageable pageable, Principal principal) {
         Category categoryServiceById = iCategoryService.findById(category);
         Page<Blog> page = iBlogService.findAll(pageable, search, categoryServiceById);
         model.addAttribute("list", page);
@@ -34,6 +39,12 @@ public class BlogController {
         model.addAttribute("search", search);
         model.addAttribute("category", iCategoryService.findById(category));
         model.addAttribute("cately", category);
+        User user = (User) ((Authentication) principal).getPrincipal();
+        for (GrantedAuthority a : user.getAuthorities()) {
+            if (a.getAuthority().equals("ROLE_ADMIN")) {
+                model.addAttribute("admin", "ADMIN");
+            }
+        }
 
         return "/list";
     }
