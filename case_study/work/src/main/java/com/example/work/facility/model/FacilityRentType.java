@@ -1,4 +1,4 @@
-package com.example.work.employee.model;
+package com.example.work.facility.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,13 +12,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "bo_phan")
-public class SectionType {
+@Table(name = "kieu_thue")
+public class FacilityRentType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ma_bo_phan;
-    @Column(name = "ten_bo_phan")
-    private String sectionName;
-    @OneToMany(mappedBy = "sectionType")
-    List<Employee> employeeList;
+    Integer ma_kieu_thue;
+    @Column(name = "ten_kieu_thue")
+    String rentTypeName;
+    @OneToMany(mappedBy = "facilityRentType")
+    List<Facility> facilityList;
 }

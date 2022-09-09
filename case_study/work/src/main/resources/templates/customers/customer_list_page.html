@@ -11,14 +11,13 @@
 </head>
 <body>
 <div class=" text-center mt-3"><h3>Danh sách khách hàng</h3></div>
-<form class="d-flex container-fluid mt-3 w-50" action="/customer" method="get">
-    <!--    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" hidden name="action"-->
-    <!--           value="search">-->
+<form class="d-flex container-fluid mt-3 w-50" action="/listCustomer" method="get">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="key">
     <button class="btn btn-outline-success">Search</button>
 </form>
-
-
+<div th:if="${msg!=null}">
+    <p style="color: red" th:text="${msg}"></p>
+</div>
 <div class="row mt-3">
     <div>
         <table class="table table-striped table-bordered" style="width: 100%" id="tableCustomer">

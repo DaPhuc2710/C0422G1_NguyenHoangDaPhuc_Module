@@ -49,8 +49,10 @@ public class CustomerController {
     }
 
     @GetMapping("/getDetele")
-    public String goDelete(@RequestParam int deleteId) {
+    public String goDelete(@RequestParam int deleteId, RedirectAttributes redirectAttributes) {
+
         iCustomerService.delete(deleteId);
+        redirectAttributes.addFlashAttribute("msg","Xóa thành công");
         return "redirect:/listCustomer";
 
     }

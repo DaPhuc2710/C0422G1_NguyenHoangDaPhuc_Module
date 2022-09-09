@@ -1,7 +1,10 @@
 package com.example.work.employee.model;
 
-import javax.persistence.*;
+import com.example.work.contract.model.Contract;
 
+
+import javax.persistence.*;
+import java.util.List;
 @Entity
 @Table(name = "nhan_vien")
 public class Employee {
@@ -33,11 +36,26 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "ma_bo_phan", referencedColumnName = "ma_bo_phan")
     private SectionType sectionType;
+    @OneToMany(mappedBy = "employee")
+    List<Contract> contractList;
 
     public Employee() {
     }
 
-    public Employee(Integer employeeId, String employeeName, String dayOfBirth, int idNumber, double payment, int phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType) {
+    public Employee(String employeeName, String dayOfBirth, int idNumber, double payment, int phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
+        this.employeeName = employeeName;
+        this.dayOfBirth = dayOfBirth;
+        this.idNumber = idNumber;
+        this.payment = payment;
+        this.phoneNum = phoneNum;
+        this.email = email;
+        this.positionType = positionType;
+        this.standardType = standardType;
+        this.sectionType = sectionType;
+        this.contractList = contractList;
+    }
+
+    public Employee(Integer employeeId, String employeeName, String dayOfBirth, int idNumber, double payment, int phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.dayOfBirth = dayOfBirth;
@@ -45,23 +63,10 @@ public class Employee {
         this.payment = payment;
         this.phoneNum = phoneNum;
         this.email = email;
-
         this.positionType = positionType;
         this.standardType = standardType;
         this.sectionType = sectionType;
-    }
-
-    public Employee(String employeeName, String dayOfBirth, int idNumber, double payment, int phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType) {
-        this.employeeName = employeeName;
-        this.dayOfBirth = dayOfBirth;
-        this.idNumber = idNumber;
-        this.payment = payment;
-        this.phoneNum = phoneNum;
-        this.email = email;
-
-        this.positionType = positionType;
-        this.standardType = standardType;
-        this.sectionType = sectionType;
+        this.contractList = contractList;
     }
 
     public Integer getEmployeeId() {
@@ -142,5 +147,13 @@ public class Employee {
 
     public void setSectionType(SectionType sectionType) {
         this.sectionType = sectionType;
+    }
+
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
     }
 }

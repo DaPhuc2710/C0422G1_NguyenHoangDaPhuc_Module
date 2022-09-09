@@ -53,7 +53,6 @@
         <select th:field="*{customerType.ma_loai_khach}">
             <option th:each="typeCus:${type}" th:value="${typeCus.ma_loai_khach}"
                     th:text="${typeCus.customerTypeName}"></option>
-
         </select>
     </div>
     <div class="mb-3">

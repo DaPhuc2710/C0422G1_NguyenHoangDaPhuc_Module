@@ -35,14 +35,19 @@ public class EmployeeController {
                          @RequestParam Optional<String> key) {
         String keyVal = key.orElse("");
         model.addAttribute("employeeList", iEmployeeService.findAllByEmployeeNameContaining(keyVal, pageable));
-
         model.addAttribute("keyVal", keyVal);
         return "/employees/employees_list_page";
     }
+
     @GetMapping("/goDetele")
-    public String goDelete(@RequestParam  int deleteId, RedirectAttributes redirectAttributes){
-        redirectAttributes.addFlashAttribute("msg","Xóa thành công");
+    public String goDelete(@RequestParam int deleteId, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("msg", "Xóa thành công");
         iEmployeeService.delete(deleteId);
         return "redirect:/goEmployeeList";
+    }
+
+    @GetMapping("/goAddEmployee")
+    public String goAddForm() {
+        return null;
     }
 }

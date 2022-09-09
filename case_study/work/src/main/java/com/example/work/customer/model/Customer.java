@@ -1,6 +1,11 @@
 package com.example.work.customer.model;
 
+import com.example.work.contract.model.Contract;
+
+
 import javax.persistence.*;
+import java.util.List;
+
 
 @Entity
 @Table(name = "khach_hang")
@@ -26,10 +31,25 @@ public class Customer {
     @JoinColumn(name = "ma_loai_khach", referencedColumnName = "ma_loai_khach")
     private CustomerType customerType;
 
+    @OneToMany(mappedBy = "customer")
+    List<Contract> contractList;
+
     public Customer() {
     }
 
-    public Customer(int idCustomer, String nameCustomer, String dateOfBirth, int gender, int idNumber, int phoneNumber, String email, String address, CustomerType customerType) {
+    public Customer(String nameCustomer, String dateOfBirth, int gender, int idNumber, int phoneNumber, String email, String address, CustomerType customerType, List<Contract> contractList) {
+        this.nameCustomer = nameCustomer;
+        this.dateOfBirth = dateOfBirth;
+        this.gender = gender;
+        this.idNumber = idNumber;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+        this.customerType = customerType;
+        this.contractList = contractList;
+    }
+
+    public Customer(int idCustomer, String nameCustomer, String dateOfBirth, int gender, int idNumber, int phoneNumber, String email, String address, CustomerType customerType, List<Contract> contractList) {
         this.idCustomer = idCustomer;
         this.nameCustomer = nameCustomer;
         this.dateOfBirth = dateOfBirth;
@@ -39,17 +59,7 @@ public class Customer {
         this.email = email;
         this.address = address;
         this.customerType = customerType;
-    }
-
-    public Customer(String nameCustomer, String dateOfBirth, int gender, int idNumber, int phoneNumber, String email, String address, CustomerType customerType) {
-        this.nameCustomer = nameCustomer;
-        this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
-        this.idNumber = idNumber;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.address = address;
-        this.customerType = customerType;
+        this.contractList = contractList;
     }
 
     public int getIdCustomer() {
@@ -122,5 +132,13 @@ public class Customer {
 
     public void setCustomerType(CustomerType customerType) {
         this.customerType = customerType;
+    }
+
+    public List<Contract> getContractList() {
+        return contractList;
+    }
+
+    public void setContractList(List<Contract> contractList) {
+        this.contractList = contractList;
     }
 }
