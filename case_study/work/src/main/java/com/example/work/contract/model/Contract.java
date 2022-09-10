@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-//@Getter
-//@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
+
 @Entity
 @Table(name = "hop_dong")
 public class Contract {
@@ -38,6 +36,28 @@ public class Contract {
     @ManyToOne
     @JoinColumn(name = "ma_dich_vu", referencedColumnName = "ma_dich_vu")
     private Facility facility;
+
+    public Contract() {
+    }
+
+    public Contract(String beginDate, String endDate, Double deposit, Employee employee, Customer customer, Facility facility) {
+        this.beginDate = beginDate;
+        this.endDate = endDate;
+        this.deposit = deposit;
+        this.employee = employee;
+        this.customer = customer;
+        this.facility = facility;
+    }
+
+    public Contract(Integer contractId, String beginDate, String endDate, Double deposit, Employee employee, Customer customer, Facility facility) {
+        this.contractId = contractId;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
+        this.deposit = deposit;
+        this.employee = employee;
+        this.customer = customer;
+        this.facility = facility;
+    }
 
     public Integer getContractId() {
         return contractId;

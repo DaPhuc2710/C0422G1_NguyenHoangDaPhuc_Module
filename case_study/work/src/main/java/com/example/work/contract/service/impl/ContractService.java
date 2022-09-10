@@ -28,10 +28,10 @@ public class ContractService implements IContractService {
         return iContractRepository.findById(id);
     }
 
-//    @Override
-//    public Page<Contract> findAllByCustomerContainingAndEmployeeContaining(String name, Pageable pageable) {
-//        return iContractRepository.findAllByCustomerContainingAndEmployeeContaining(name,pageable);
-//    }
+    @Override
+    public Page<Contract> findAllByCustomerContaining(String name, Pageable pageable) {
+        return iContractRepository.findAllByCustomer_NameCustomerContaining(name,pageable);
+    }
     @Override
     public void save(Contract contract) {
         iContractRepository.save(contract);
@@ -42,8 +42,8 @@ public class ContractService implements IContractService {
         iContractRepository.save(contract);
     }
 
-    @Override
-    public List<Contract> findAll() {
-        return iContractRepository.findAll();
-    }
+//    @Override
+//    public List<Contract> findAll() {
+//        return iContractRepository.findAll();
+//    }
 }

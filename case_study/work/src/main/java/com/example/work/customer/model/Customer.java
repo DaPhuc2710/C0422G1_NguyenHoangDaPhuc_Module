@@ -2,10 +2,8 @@ package com.example.work.customer.model;
 
 import com.example.work.contract.model.Contract;
 
-
 import javax.persistence.*;
 import java.util.List;
-
 
 @Entity
 @Table(name = "khach_hang")
@@ -33,34 +31,6 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer")
     List<Contract> contractList;
-
-    public Customer() {
-    }
-
-    public Customer(String nameCustomer, String dateOfBirth, int gender, int idNumber, int phoneNumber, String email, String address, CustomerType customerType, List<Contract> contractList) {
-        this.nameCustomer = nameCustomer;
-        this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
-        this.idNumber = idNumber;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.address = address;
-        this.customerType = customerType;
-        this.contractList = contractList;
-    }
-
-    public Customer(int idCustomer, String nameCustomer, String dateOfBirth, int gender, int idNumber, int phoneNumber, String email, String address, CustomerType customerType, List<Contract> contractList) {
-        this.idCustomer = idCustomer;
-        this.nameCustomer = nameCustomer;
-        this.dateOfBirth = dateOfBirth;
-        this.gender = gender;
-        this.idNumber = idNumber;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.address = address;
-        this.customerType = customerType;
-        this.contractList = contractList;
-    }
 
     public int getIdCustomer() {
         return idCustomer;

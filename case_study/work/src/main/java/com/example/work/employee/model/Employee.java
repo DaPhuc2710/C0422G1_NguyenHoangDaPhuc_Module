@@ -5,6 +5,7 @@ import com.example.work.contract.model.Contract;
 
 import javax.persistence.*;
 import java.util.List;
+
 @Entity
 @Table(name = "nhan_vien")
 public class Employee {
@@ -18,13 +19,13 @@ public class Employee {
     private String dayOfBirth;
 
     @Column(name = "so_cmnd")
-    private int idNumber;
+    private Long idNumber;
 
     @Column(name = "luong")
-    private double payment;
+    private Double payment;
 
     @Column(name = "so_dien_thoai")
-    private int phoneNum;
+    private Long phoneNum;
 
     private String email;
     @ManyToOne
@@ -42,7 +43,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String employeeName, String dayOfBirth, int idNumber, double payment, int phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
+    public Employee(String employeeName, String dayOfBirth, Long idNumber, Double payment, Long phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
         this.employeeName = employeeName;
         this.dayOfBirth = dayOfBirth;
         this.idNumber = idNumber;
@@ -55,7 +56,7 @@ public class Employee {
         this.contractList = contractList;
     }
 
-    public Employee(Integer employeeId, String employeeName, String dayOfBirth, int idNumber, double payment, int phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
+    public Employee(Integer employeeId, String employeeName, String dayOfBirth, Long idNumber, Double payment, Long phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.dayOfBirth = dayOfBirth;
@@ -93,27 +94,27 @@ public class Employee {
         this.dayOfBirth = dayOfBirth;
     }
 
-    public int getIdNumber() {
+    public Long getIdNumber() {
         return idNumber;
     }
 
-    public void setIdNumber(int idNumber) {
+    public void setIdNumber(Long idNumber) {
         this.idNumber = idNumber;
     }
 
-    public double getPayment() {
+    public Double getPayment() {
         return payment;
     }
 
-    public void setPayment(double payment) {
+    public void setPayment(Double payment) {
         this.payment = payment;
     }
 
-    public int getPhoneNum() {
+    public Long getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(int phoneNum) {
+    public void setPhoneNum(Long phoneNum) {
         this.phoneNum = phoneNum;
     }
 

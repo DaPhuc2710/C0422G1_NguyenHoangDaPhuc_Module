@@ -8,6 +8,9 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div th:if="${msg!=null}">
+    <p style="color: red" th:text="${msg}"></p>
+</div>
 <div class="row mt-3">
     <div>
         <table class="table">
@@ -54,7 +57,7 @@
                     </button>
                 </td>
                 <td>
-                    <a class="btn btn-primary" href="#" role="button">
+                    <a class="btn btn-primary" th:href="@{/goUpdateEmployee(id=${employee.employeeId})}" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                              class="bi bi-pen"
                              viewBox="0 0 16 16">
@@ -76,7 +79,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                         aria-label="Close"></button>
             </div>
-            <form action="/goDetele" method="get">
+            <form action="/goDeteleEmployee" method="get">
                 <div class="modal-body">
                     <input type="text" name="deleteId" id="deleteId" readonly>
                     Bạn có chắc là xóa nhân viên này không ?

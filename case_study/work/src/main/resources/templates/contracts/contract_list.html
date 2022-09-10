@@ -10,6 +10,9 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
+<div th:if="${msg!=null}">
+    <p style="color: red" th:text="${msg}"></p>
+</div>
 <div class="row mt-3">
     <div>
         <table class="table">
@@ -52,13 +55,13 @@
         </table>
     </div>
 </div>
-<!--<div>-->
-<!--    <a th:href="@{'/goContractList'(page=${contractList.number - 1}, key = ${keyVal})}"-->
-<!--       th:if="${contractList.hasPrevious()}">Previous</a>-->
-<!--    <span th:text="${contractList.number + 1}"></span>/<span th:text="${contractList.totalPages}"></span>-->
-<!--    <a th:href="@{'/goContractList'(page=${contractList.number + 1}, key = ${keyVal})}"-->
-<!--       th:if="${contractList.hasNext()}">Next</a>-->
-<!--</div>-->
+<div>
+    <a th:href="@{'/goContractList'(page=${contractList.number - 1}, key = ${keyVal})}"
+       th:if="${contractList.hasPrevious()}">Previous</a>
+    <span th:text="${contractList.number + 1}"></span>/<span th:text="${contractList.totalPages}"></span>
+    <a th:href="@{'/goContractList'(page=${contractList.number + 1}, key = ${keyVal})}"
+       th:if="${contractList.hasNext()}">Next</a>
+</div>
 </body>
 <footer th:replace="fragment::html_footer"></footer>
 </html>

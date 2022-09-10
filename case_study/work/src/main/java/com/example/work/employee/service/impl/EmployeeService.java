@@ -28,11 +28,12 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void save(Employee employee) {
-
+        iEmployeeRepository.save(employee);
     }
 
     @Override
     public void update(Employee employee) {
+        iEmployeeRepository.save(employee);
 
     }
 

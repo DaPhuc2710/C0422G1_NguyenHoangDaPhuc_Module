@@ -1,16 +1,8 @@
 package com.example.work.customer.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.List;
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
 @Table(name = "loai_khach")
 public class CustomerType {
@@ -21,4 +13,28 @@ public class CustomerType {
     private String customerTypeName;
     @OneToMany(mappedBy = "customerType")
     List<Customer> customerList;
+
+    public int getMa_loai_khach() {
+        return ma_loai_khach;
+    }
+
+    public void setMa_loai_khach(int ma_loai_khach) {
+        this.ma_loai_khach = ma_loai_khach;
+    }
+
+    public String getCustomerTypeName() {
+        return customerTypeName;
+    }
+
+    public void setCustomerTypeName(String customerTypeName) {
+        this.customerTypeName = customerTypeName;
+    }
+
+    public List<Customer> getCustomerList() {
+        return customerList;
+    }
+
+    public void setCustomerList(List<Customer> customerList) {
+        this.customerList = customerList;
+    }
 }
