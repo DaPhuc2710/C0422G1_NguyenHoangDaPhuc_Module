@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment::html_head">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 class="text-center">Cập nhập thông tin dịch vụ</h1>
+<form class="m-auto w-25" method="post" action="/saveUpdateForm" th:object="${services}">
+    <p>Chọn dịch vụ cần sửa</p>
+    <select onchange="services()" id="select" th:field="*{typeOfSer.ma_loai_dich_vu}" class="form-select">
+        <option th:value="1">Villa</option>
+        <option th:value="2">House</option>
+        <option th:value="3">Room</option>
+    </select>
+    <div class="mb-3">
+        <label for="exampleInputEmail13" class="form-label">Mã dịch vụ</label>
+        <input type="text" class="form-control" id="exampleInputEmail13" aria-describedby="emailHelp"
+               th:field="*{facilityId}" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail111" class="form-label">Tên dịch vụ</label>
+        <input type="text" class="form-control" id="exampleInputEmail111" aria-describedby="emailHelp" name="name"
+               th:field="*{facName}">
+        <span th:errors="*{facName}" style="color: red"></span>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Diện tích sử dụng</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="area"
+               th:field="*{areaVal}">
+
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail2" class="form-label">Chi phí thuê </label>
+        <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="cost"
+               th:field="*{cost}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail3" class="form-label">Số lượng người tối đa </label>
+        <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" name="maxPeople"
+               th:field="*{maxPeople}">
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Kiểu thuê</label>
+        <select th:field="*{facilityRentType.ma_kieu_thue}">
+            <option th:each="type:${facilityRentType}" th:value="${type.ma_kieu_thue}"
+                    th:text="${type.rentTypeName}"></option>
+            <option value="0">None</option>
+        </select>
+    </div>
+    <div class="mb-3 " id="s1" style="display: none">
+        <label for="s1Input" class="form-label">Dịch vụ miễn phí đi kèm </label>
+        <input type="text" class="form-control" aria-describedby="emailHelp"
+               name="extraServices" id="s1Input" th:field="*{moreService}">
+    </div>
+    <div class="mb-3" id="s2" style="display: none">
+        <label for="s2Input" class="form-label">Tiêu chuẩn phòng </label>
+        <input type="text" class="form-control" id="s2Input" aria-describedby="emailHelp" name="quality"
+               th:field="*{roomQuality}">
+    </div>
+    <div class="mb-3" id="s3" style="display: none">
+        <label for="s3Input" class="form-label">Mô tả tiện nghi khác </label>
+        <input type="text" class="form-control" id="s3Input" aria-describedby="emailHelp" name="description"
+               th:field="*{moreDetail}">
+    </div>
+    <div class="mb-3" id="s4" style="display: none">
+        <label for="s4Input" class="form-label">Diện tích hồ bơi </label>
+        <input type="text" class="form-control" id="s4Input" aria-describedby="emailHelp" name="poolArea"
+               th:field="*{poolAreaVal}">
+
+    </div>
+    <div class="mb-3" id="s5" style="display: none">
+        <label for="s5Input" class="form-label">Số tầng </label>
+        <input type="text" class="form-control" id="s5Input" aria-describedby="emailHelp" name="floor"
+               th:field="*{floor}">
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu</button>
+</form>
+
+<script>
+    function services() {
+        let result = document.getElementById("select").value;
+        switch (result) {
+            case "1":
+                document.getElementById("s1").style.display = 'none';
+                document.getElementById("s1Input").value = null;
+                document.getElementById("s2").style.display = 'block';
+                document.getElementById("s3").style.display = 'block';
+                document.getElementById("s4").style.display = 'block';
+                document.getElementById("s5").style.display = 'block';
+                break;
+            case "2":
+                document.getElementById("s1").style.display = 'none';
+                document.getElementById("s1Input").value = null;
+                document.getElementById("s2").style.display = 'block';
+                document.getElementById("s3").style.display = 'block';
+                document.getElementById("s4").style.display = 'none';
+                document.getElementById("s4Input").value = null;
+                document.getElementById("s5").style.display = 'block';
+                break;
+            case "3":
+                document.getElementById("s1").style.display = 'block';
+                document.getElementById("s2").style.display = 'block';
+                document.getElementById("s3").style.display = 'none';
+                document.getElementById("s3Input").value = null;
+                document.getElementById("s4").style.display = 'none';
+                document.getElementById("s4Input").value = null;
+                document.getElementById("s5").style.display = 'none';
+                document.getElementById("s5Input").value = null;
+                break;
+
+        }
+    }
+
+    services();
+</script>
+
+</body>
+<footer th:replace="fragment::html_footer"></footer>
+</html>

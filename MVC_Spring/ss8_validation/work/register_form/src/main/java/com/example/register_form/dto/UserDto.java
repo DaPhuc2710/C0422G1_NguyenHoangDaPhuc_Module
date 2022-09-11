@@ -94,7 +94,7 @@ public class UserDto implements Validator {
         LocalDate age = null;
         try {
             age = LocalDate.parse(userDto.getAge());
-            if (Period.between(age, now).getYears() < 18 || Period.between(age, now).getYears() > 100) {
+            if (Period.between(age, now).getYears() < 18 || Period.between(age, now).getYears() > 120) {
                 errors.rejectValue("age", "age.err", "tuổi từ 18-120");
             }
         } catch (Exception e) {

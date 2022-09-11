@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="aab1e1d3-113f-4544-9dd6-7d3598bf5ac0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/WorkApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/controller/ContractController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/model/Contract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/repository/IContractRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/service/IContractService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/service/impl/ContractService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/controller/FuramaController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/Controller/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/model/CustomerType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/repository/ICustomerRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/repository/ICustomerTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/ICustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/ICustomerTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/impl/CustomerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/impl/CustomerTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/dto/CustomerDto1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/dto/FacilityDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/controller/EmployeeController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/Employee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/PositionType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/SectionType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/StandardType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/IEmployeeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/IPositionTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/ISectionTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/IStandardTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/IEmployeeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/IPositionTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/ISectionTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/IStandardTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/EmployeeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/PositionTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/SectionTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/StandardTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/controller/FacilityController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/model/Facility.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/model/FacilityRentType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/model/TypeOfSer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/repository/IFacilityRentTypeRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/repository/IFacilityRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/repository/ITypeOfSerRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/IFacilityRentTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/IFacilityService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/ITypeOfSerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/impl/FacilityRentTypeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/impl/FacilityService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/impl/TypeOfSerService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/contracts/contract_adding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/contracts/contract_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/contracts/contract_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/customers/customer_adding_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/customers/customer_list_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/customers/customer_update_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/employees/employees_adding_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/employees/employees_list_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/employees/employees_update_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/main_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/services/services_adding_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/services/services_list_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/services/services_update_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/WorkApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/contract/controller/ContractController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/contract/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/contract/model/DetailContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/contract/repository/IContractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/contract/service/IContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/contract/service/impl/ContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/FuramaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/Controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/repository/ICustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/ICustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/ICustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/impl/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/impl/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/CustomerDto1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/FacilityDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/PositionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/SectionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/StandardType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/IEmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/IPositionTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/ISectionTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/IStandardTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/IEmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/IPositionTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/ISectionTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/IStandardTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/PositionTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/SectionTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/StandardTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/controller/FacilityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/model/Facility.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/model/FacilityRentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/model/TypeOfSer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/repository/IFacilityRentTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/repository/IFacilityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/repository/ITypeOfSerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/IFacilityRentTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/IFacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/ITypeOfSerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/impl/FacilityRentTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/impl/FacilityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/impl/TypeOfSerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/contracts/contract_adding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/contracts/contract_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/contracts/contract_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customers/customer_adding_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customers/customer_list_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/customers/customer_update_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_adding_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_list_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_update_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/services/services_adding_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/services/services_list_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/services/services_update_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/work/WorkApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC_Spring/ss8_validation/work/register_form/src/main/java/com/example/register_form/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MVC_Spring/ss8_validation/work/register_form/src/main/java/com/example/register_form/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../MVC_Spring/ss8_validation/work/song/src/main/java/com/example/song/controller/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../MVC_Spring/ss8_validation/work/song/src/main/java/com/example/song/controller/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/work/src/main/resources/templates/services/services_adding_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/work/src/main/resources/templates/services/services_adding_page.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="work" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="2Dv4zHsH7iUjjz98qVZTyWrXMz7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="123456789" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MVC_Spring/ss8_validation/work/register_form" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study\work\src\main\resources\templates\services" />
+      <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study\work\src\main\resources\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study\work\src\main\resources\templates" />
+      <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study\work\src\main\resources\templates\fragment" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WorkApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="work.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.work.WorkApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aab1e1d3-113f-4544-9dd6-7d3598bf5ac0" name="Changes" comment="" />
+      <created>1661566493092</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661566493092</updated>
+      <workItem from="1661566494511" duration="5359000" />
+      <workItem from="1661571908195" duration="799000" />
+      <workItem from="1661572724961" duration="6895000" />
+      <workItem from="1661583900993" duration="455000" />
+      <workItem from="1661584509730" duration="430000" />
+      <workItem from="1661615934886" duration="729000" />
+      <workItem from="1661682959768" duration="10885000" />
+      <workItem from="1661703709558" duration="646000" />
+      <workItem from="1661704499650" duration="7000" />
+      <workItem from="1661708162768" duration="6000" />
+      <workItem from="1661738069213" duration="1143000" />
+      <workItem from="1661740158274" duration="1800000" />
+      <workItem from="1661826240703" duration="6835000" />
+      <workItem from="1661847010603" duration="7701000" />
+      <workItem from="1661915115514" duration="492000" />
+      <workItem from="1662170614289" duration="2869000" />
+      <workItem from="1662216250715" duration="510000" />
+      <workItem from="1662349022604" duration="26000" />
+      <workItem from="1662604614914" duration="3364000" />
+      <workItem from="1662618779375" duration="9876000" />
+      <workItem from="1662686212653" duration="254000" />
+      <workItem from="1662687440395" duration="10160000" />
+      <workItem from="1662711430466" duration="5063000" />
+      <workItem from="1662716597865" duration="2004000" />
+      <workItem from="1662774250589" duration="8083000" />
+      <workItem from="1662785663980" duration="114000" />
+      <workItem from="1662785823713" duration="8072000" />
+      <workItem from="1662800863557" duration="2803000" />
+      <workItem from="1662815900527" duration="2860000" />
+      <workItem from="1662869817076" duration="14636000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/work/contract/controller/ContractController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/work/customer/Controller/CustomerController.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
