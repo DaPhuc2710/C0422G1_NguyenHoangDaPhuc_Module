@@ -12,13 +12,14 @@ public interface IContractRepository extends JpaRepository<Contract, Integer> {
     Page<Contract> findAllByCustomer_NameCustomerContaining(String name, Pageable pageable);
 
     @Query(value = "select \n" +
+            "hd.ma_hop_dong as idContract,\n" +
             "dv.ten_dich_vu as serviceName,\n" +
             "kh.ho_ten as customerName,\n" +
             "hd.ngay_lam_hop_dong as startDay,\n" +
             "hd.ngay_ket_thuc as endDay,\n" +
             "hd.tien_dat_coc as deposit,\n" +
             "\n" +
-            "SUM(ifnull(hdct.so_luong * dvdk.gia,0))+dv.chi_phi_thue AS total\n" +
+            "SUM(ifnull(hdct.so_luong * dvdk.gia,0))+dv.chi_phi_thue AS toTal\n" +
             "FROM hop_dong hd\n" +
             "LEFT JOIN khach_hang kh ON kh.ma_khach_hang = hd.ma_khach_hang\n" +
             "LEFT JOIN dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu\n" +

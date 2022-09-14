@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aab1e1d3-113f-4544-9dd6-7d3598bf5ac0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/ContractPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/contract/AttachService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IAttachServiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IDetailContractRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/AttachSerRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/DetailContractQuantity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/EmployeeDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IAttachSerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IDetailContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/AttachSerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/DetailContractService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/Test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -17,102 +21,114 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/controller/ContractController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/model/Contract.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/repository/IContractRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/service/IContractService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/contract/service/impl/ContractService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/Controller/CustomerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/model/CustomerType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/repository/ICustomerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/repository/ICustomerTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/ICustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/ICustomerTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/impl/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/customer/service/impl/CustomerTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/dto/CustomerDto1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/dto/FacilityDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/work/dto/FacilityDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/controller/EmployeeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/PositionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/SectionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/model/StandardType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/IEmployeeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/IPositionTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/ISectionTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/repository/IStandardTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/IEmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/IPositionTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/ISectionTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/IStandardTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/EmployeeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/PositionTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/SectionTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/employee/service/impl/StandardTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/controller/FacilityController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/model/Facility.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/model/FacilityRentType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/model/TypeOfSer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/repository/IFacilityRentTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/repository/IFacilityRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/repository/ITypeOfSerRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/IFacilityRentTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/IFacilityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/ITypeOfSerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/impl/FacilityRentTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/impl/FacilityService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/work/facility/service/impl/TypeOfSerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/boostrap/js/bootstrap.min.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/contracts/contract_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/contracts/contract_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/customers/customer_adding_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/customers/customer_adding_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/fragment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/main_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/services/services_update_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/services/services_update_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/contract/controller/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/ContractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/contract/model/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/contract/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/contract/model/DetailContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/contract/DetailContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/contract/repository/IContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IContractRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/contract/service/IContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IContractService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/contract/service/impl/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/ContractService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/Controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/model/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/customer/CustomerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/ICustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/repository/ICustomerTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/ICustomerTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/ICustomerTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/ICustomerTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/customer/service/impl/CustomerTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/CustomerTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/dto/CustomerDto1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/CustomerDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/dto/FacilityDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/FacilityDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/employee/PositionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/SectionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/employee/SectionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/model/StandardType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/employee/StandardType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/IEmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IEmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/IPositionTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IPositionTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/ISectionTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/ISectionTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/repository/IStandardTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IStandardTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/IEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IEmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/IPositionTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IPositionTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/ISectionTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/ISectionTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/IStandardTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IStandardTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/PositionTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/PositionTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/SectionTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/SectionTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/employee/service/impl/StandardTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/StandardTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/controller/FacilityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/FacilityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/model/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/facility/Facility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/model/FacilityRentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/facility/FacilityRentType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/model/TypeOfSer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/facility/TypeOfSer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/repository/IFacilityRentTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IFacilityRentTypeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/repository/IFacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IFacilityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/repository/ITypeOfSerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/ITypeOfSerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/IFacilityRentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IFacilityRentTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/IFacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/IFacilityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/ITypeOfSerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/ITypeOfSerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/impl/FacilityRentTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/FacilityRentTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/impl/FacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/FacilityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/facility/service/impl/TypeOfSerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/service/impl/TypeOfSerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/dto/ContractPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/ContractPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/dto/CustomerDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/dto/CustomerDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/model/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IAttachServiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IAttachServiceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/work/repository/IContractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/boostrap/js/bootstrap.min.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contracts/contract_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contracts/contract_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/customers/customer_adding_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/customers/customer_adding_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_adding_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_adding_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_update_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/employees/employees_update_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main_menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main_menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/services/services_update_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/services/services_update_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,9 +161,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="HTML File" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -178,11 +194,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last.edited.regexp" value="123456789" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MVC_Spring/ss12_jquery_ajax/work/phone_management_101" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/boostrap/js" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study_101\work\src\main\resources\static\boostrap\js" />
       <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study_101\work\src\main\java\com\example\work\service\impl" />
       <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study_101\work\src\main\java\com\example\work\service" />
       <recent name="D:\codegym_study\module4\C0422G1_NguyenHoangDaPhuc_Module\case_study\work\src\main\resources\templates\services" />
@@ -245,6 +262,15 @@
       <workItem from="1662944353623" duration="2821000" />
       <workItem from="1662947332484" duration="7359000" />
       <workItem from="1662964286282" duration="1900000" />
+      <workItem from="1662966336888" duration="5965000" />
+      <workItem from="1663033030866" duration="1550000" />
+      <workItem from="1663050660788" duration="7202000" />
+      <workItem from="1663058456061" duration="46000" />
+      <workItem from="1663058506186" duration="1440000" />
+      <workItem from="1663059963338" duration="14000" />
+      <workItem from="1663059998905" duration="2435000" />
+      <workItem from="1663127087114" duration="1473000" />
+      <workItem from="1663138469228" duration="2835000" />
     </task>
     <servers />
   </component>
@@ -255,9 +281,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/work/controller/CustomerController.java</url>
-          <line>83</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/work/controller/AttachSerRestController.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

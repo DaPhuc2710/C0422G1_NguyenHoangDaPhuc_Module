@@ -5,9 +5,6 @@
     <title>Trang danh sách hợp đồng</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
 </head>
 <body>
 <div th:if="${msg!=null}">
@@ -55,7 +52,8 @@
                     </button>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal2">
+                            data-bs-target="#exampleModal2"
+                            th:attr="onclick=|showAttachList('${contract.getIdContract()}')|">
                         Danh sách các dịch vụ đi kèm
                     </button>
                 </td>
@@ -77,8 +75,8 @@
     <a th:href="@{'/goContractList'(page=${contractList.number + 1})}"
        th:if="${contractList.hasNext()}">Next</a>
 </div>
-</body>
-<!-- Modal 1 -->
+
+<!-- Modal thêm các dịch vụ đi kèm -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -96,23 +94,75 @@
         </div>
     </div>
 </div>
-<!-- Modal 2 -->
+<!-- Modal hiển thị các dịch vụ đi kèm -->
 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel2">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel2">anh sách dịch vụ đi kèm</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                number 2
+            <div class="modal-body row mt-3">
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">STT</th>
+                        <th scope="col">Tên dịch vụ đi kèm</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Đơn vị</th>
+                        <th scope="col">Trạng thái</th>
+                        <th scope="col">Số lượng</th>
+                    </tr>
+                    </thead>
+                    <tbody th:id="attachList">
+                    </tbody>
+                </table>
+                <p id="toTalAF"></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
 </div>
 <footer th:replace="fragment::html_footer"></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function showAttachList(id) {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET",
+            url: "http://localhost:8080/attachList?id=" + id,
+            success: function (listOfAttachTotal) {
+                console.log(listOfAttachTotal)
+                let htmlStr = '';
+                let total = 0;
+                $("#attachList").html(htmlStr);
+                $("#toTalAF").html("Tổng tiền là   : " + total + " đồng");
+                if (listOfAttachTotal != undefined) {
+                    for (let i = 0; i < listOfAttachTotal.length; i++) {
+                        htmlStr += `<tr>
+                        <td>${i + 1}</td>
+                        <td>${listOfAttachTotal[i].nameAttach}</td>
+                        <td>${listOfAttachTotal[i].price}</td>
+                        <td>${listOfAttachTotal[i].unit}</td>
+                        <td>${listOfAttachTotal[i].status}</td>
+                        <td>${listOfAttachTotal[i].quantity}</td>
+                    </tr>`;
+                        total += listOfAttachTotal[i].price + listOfAttachTotal[i].quantity;
+                    }
+                    $("#attachList").html(htmlStr);
+                    $("#toTalAF").html("Tổng tiền là   : " + total + " đồng");
+                }
+
+            },
+            error: function (resultError) {
+            }
+        });
+    }
+</script>
+</body>
 </html>

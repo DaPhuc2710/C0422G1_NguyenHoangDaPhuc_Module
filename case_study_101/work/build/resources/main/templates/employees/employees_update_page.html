@@ -14,31 +14,43 @@
         <label for="exampleInputEmail12" class="form-label">Id nhân viên </label>
         <input type="text" readonly class="form-control" id="exampleInputEmail12" aria-describedby="emailHelp"
                th:field="*{employeeId}">
+        <span th:errors="*{employeeName}" type="text" style="color: red"></span>
+
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Họ tên</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                th:field="*{employeeName}">
+        <span th:errors="*{employeeName}" type="text" style="color: red"></span>
+
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail2" class="form-label">Ngày sinh </label>
         <input type="date" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
                th:field="*{dayOfBirth}">
+        <span th:errors="*{dayOfBirth}" type="text" style="color: red"></span>
+
     </div>
     <div class=" mb-3">
         <label for="exampleInputEmail3" class="form-label">Số CMND </label>
         <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp"
                th:field="*{idNumber}">
+        <span th:errors="*{idNumber}" type="text" style="color: red"></span>
+
     </div>
     <div class=" mb-3">
         <label for="exampleInputEmail4" class="form-label">Số ĐT </label>
         <input type="text" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp"
                th:field="*{phoneNum}">
+        <span th:errors="*{phoneNum}" type="text" style="color: red"></span>
+
     </div>
     <div class=" mb-3">
         <label for="exampleInputEmail5" class="form-label">Email </label>
         <input type="email" class="form-control" id="exampleInputEmail5" aria-describedby="emailHelp"
                th:field="*{email}">
+        <span th:errors="*{email}" type="text" style="color: red"></span>
+
     </div>
     <div class=" mb-3">
         <label class="form-label">Trình độ</label>
@@ -69,6 +81,8 @@
         <label for="exampleInputEmail8" class="form-label">Lương </label>
         <input type="text" class="form-control" id="exampleInputEmail8" aria-describedby="emailHelp"
                th:field="*{payment}">
+        <span th:errors="*{payment}" type="text" style="color: red"></span>
+
     </div>
     <button type="submit" class="btn btn-primary">Lưu</button>
 </form>

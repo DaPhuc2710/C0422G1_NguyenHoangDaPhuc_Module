@@ -16,26 +16,21 @@ public class CustomerDto implements Validator {
 
     private Integer idCustomer;
     @NotBlank(message = "Tên không được để trống")
-    @NotNull(message = " Tên không được để trống")
     @Pattern(regexp = "^([A-VXYỲỌÁẦẢẤỜỄÀẠẰỆẾÝỘẬỐŨỨĨÕÚỮỊỖÌỀỂẨỚẶÒÙỒỢÃỤỦÍỸẮẪỰỈỎỪỶỞÓÉỬỴẲẸÈẼỔẴẺỠƠÔƯĂÊÂĐ]{1})([a-vxyỳọáầảấờễàạằệếýộậốũứĩõúữịỗìềểẩớặòùồợãụủíỹắẫựỉỏừỷởóéửỵẳẹèẽổẵẻỡơôưăêâđ]+)((\\s{1}([A-VXYỲỌÁẦẢẤỜỄÀẠẰỆẾÝỘẬỐŨỨĨÕÚỮỊỖÌỀỂẨỚẶÒÙỒỢÃỤỦÍỸẮẪỰỈỎỪỶỞÓÉỬỴẲẸÈẼỔẴẺỠƠÔƯĂÊÂĐ]{1})[a-vxyỳọáầảấờễàạằệếýộậốũứĩõúữịỗìềểẩớặòùồợãụủíỹắẫựỉỏừỷởóéửỵẳẹèẽổẵẻỡơôưăêâđ]+))+$", message = "Tên không được chứa số và Phải viết hoa chữ cái đầu ")
     private String nameCustomer;
-
+    @NotBlank(message = "Không được để trống")
     private String dateOfBirth;
     private Integer gender;
-
     @NotBlank(message = "Không được để trống")
-    @NotNull(message = "Không được để trống")
     @Pattern(regexp = "^([0-9]{9})$", message = "CMND phải đủ 9 số")
     private String idNumber;
 
     @NotBlank(message = "Không được để trống")
-    @NotNull(message = "Không được để trống")
     @Pattern(regexp = "^((84\\+|0)+(90|91)+[0-9]{7})$", message = "Nhập đúng định dạng (84+/0)+(90/91)+XXXXXXX")
     private String phoneNumber;
 
     @Email(message = "Sai định dạng email")
     @NotBlank(message = "Không được để trống")
-    @NotNull(message = "Không được để trống")
     private String email;
 
     @NotBlank(message = "Không được để trống")

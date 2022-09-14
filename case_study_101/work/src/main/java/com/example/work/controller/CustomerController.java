@@ -46,16 +46,17 @@ public class CustomerController {
     }
 
     @PostMapping("/saveCustomer")
-    public String goSaveCustomer(@ModelAttribute("customerList") @Valid CustomerDto customerDto1,
+    public String goSaveCustomer(@ModelAttribute("customerList") @Valid CustomerDto customerDto,
                                  BindingResult bindingResult,
                                  RedirectAttributes redirectAttributes,
                                  Model model) {
+        customerDto.validate(customerDto,bindingResult);
         if (bindingResult.hasErrors()){
             model.addAttribute("type", iCustomerTypeService.findAll());
             return "/customers/customer_adding_page";
         }
         Customer customer= new Customer();
-        BeanUtils.copyProperties(customerDto1,customer);
+        BeanUtils.copyProperties(customerDto,customer);
         iCustomerService.save(customer);
         redirectAttributes.addFlashAttribute("msg", "Thêm mới thành công");
         return "redirect:/listCustomer";

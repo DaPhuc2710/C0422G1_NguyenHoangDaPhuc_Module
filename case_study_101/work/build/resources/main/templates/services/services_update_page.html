@@ -31,17 +31,23 @@
         <label for="exampleInputEmail1" class="form-label">Diện tích sử dụng</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="area"
                th:field="*{areaVal}">
+        <span th:errors="*{areaVal}" style="color: red"></span>
+
 
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail2" class="form-label">Chi phí thuê </label>
         <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" name="cost"
                th:field="*{cost}">
+        <span th:errors="*{cost}" style="color: red"></span>
+
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail3" class="form-label">Số lượng người tối đa </label>
         <input type="text" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" name="maxPeople"
                th:field="*{maxPeople}">
+        <span th:errors="*{maxPeople}" style="color: red"></span>
+
 
     </div>
     <div class="mb-3">
@@ -56,27 +62,37 @@
         <label for="s1Input" class="form-label">Dịch vụ miễn phí đi kèm </label>
         <input type="text" class="form-control" aria-describedby="emailHelp"
                name="extraServices" id="s1Input" th:field="*{moreService}">
+        <span th:errors="*{moreService}" style="color: red"></span>
+
     </div>
     <div class="mb-3" id="s2" style="display: none">
         <label for="s2Input" class="form-label">Tiêu chuẩn phòng </label>
         <input type="text" class="form-control" id="s2Input" aria-describedby="emailHelp" name="quality"
                th:field="*{roomQuality}">
+        <span th:errors="*{roomQuality}" style="color: red"></span>
+
     </div>
     <div class="mb-3" id="s3" style="display: none">
         <label for="s3Input" class="form-label">Mô tả tiện nghi khác </label>
         <input type="text" class="form-control" id="s3Input" aria-describedby="emailHelp" name="description"
                th:field="*{moreDetail}">
+        <span th:errors="*{moreDetail}" style="color: red"></span>
+
     </div>
     <div class="mb-3" id="s4" style="display: none">
         <label for="s4Input" class="form-label">Diện tích hồ bơi </label>
         <input type="text" class="form-control" id="s4Input" aria-describedby="emailHelp" name="poolArea"
                th:field="*{poolAreaVal}">
+        <span th:errors="*{poolAreaVal}" style="color: red"></span>
+
 
     </div>
     <div class="mb-3" id="s5" style="display: none">
         <label for="s5Input" class="form-label">Số tầng </label>
         <input type="text" class="form-control" id="s5Input" aria-describedby="emailHelp" name="floor"
                th:field="*{floor}">
+        <span th:errors="*{floor}" style="color: red"></span>
+
     </div>
     <button type="submit" class="btn btn-primary">Lưu</button>
 </form>

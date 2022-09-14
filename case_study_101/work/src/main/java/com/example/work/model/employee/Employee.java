@@ -19,13 +19,13 @@ public class Employee {
     private String dayOfBirth;
 
     @Column(name = "so_cmnd")
-    private Long idNumber;
+    private String idNumber;
 
     @Column(name = "luong")
     private Double payment;
 
     @Column(name = "so_dien_thoai")
-    private Long phoneNum;
+    private String phoneNum;
 
     private String email;
     @ManyToOne
@@ -38,12 +38,12 @@ public class Employee {
     @JoinColumn(name = "ma_bo_phan", referencedColumnName = "ma_bo_phan")
     private SectionType sectionType;
     @OneToMany(mappedBy = "employee")
-    List<Contract> contractList;
+    private List<Contract> contractList;
 
     public Employee() {
     }
 
-    public Employee(String employeeName, String dayOfBirth, Long idNumber, Double payment, Long phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
+    public Employee(String employeeName, String dayOfBirth, String idNumber, Double payment, String phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
         this.employeeName = employeeName;
         this.dayOfBirth = dayOfBirth;
         this.idNumber = idNumber;
@@ -56,7 +56,7 @@ public class Employee {
         this.contractList = contractList;
     }
 
-    public Employee(Integer employeeId, String employeeName, String dayOfBirth, Long idNumber, Double payment, Long phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
+    public Employee(Integer employeeId, String employeeName, String dayOfBirth, String idNumber, Double payment, String phoneNum, String email, PositionType positionType, StandardType standardType, SectionType sectionType, List<Contract> contractList) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.dayOfBirth = dayOfBirth;
@@ -69,6 +69,7 @@ public class Employee {
         this.sectionType = sectionType;
         this.contractList = contractList;
     }
+
 
     public Integer getEmployeeId() {
         return employeeId;
@@ -94,11 +95,11 @@ public class Employee {
         this.dayOfBirth = dayOfBirth;
     }
 
-    public Long getIdNumber() {
+    public String getIdNumber() {
         return idNumber;
     }
 
-    public void setIdNumber(Long idNumber) {
+    public void setIdNumber(String idNumber) {
         this.idNumber = idNumber;
     }
 
@@ -110,11 +111,11 @@ public class Employee {
         this.payment = payment;
     }
 
-    public Long getPhoneNum() {
+    public String getPhoneNum() {
         return phoneNum;
     }
 
-    public void setPhoneNum(Long phoneNum) {
+    public void setPhoneNum(String phoneNum) {
         this.phoneNum = phoneNum;
     }
 
